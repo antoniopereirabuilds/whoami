@@ -1,0 +1,276 @@
+---
+import '~/styles/global.css';
+import Analytics from '~/components/Analytics.astro';
+import {
+  profile,
+  site,
+  experience,
+  education,
+  certifications,
+  specializations,
+  commercialCredentials,
+  honors,
+  knowsAbout,
+  languages,
+  faq,
+} from '~/data/profile';
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = `${profile.name} — ${profile.headline}`,
+  description = site.description,
+} = Astro.props;
+
+const origin = (Astro.site ?? new URL(site.url)).toString().replace(/\/$/, '');
+const canonical = new URL(Astro.url.pathname, origin + '/').toString();
+const ogImage = new URL(profile.photoUrl, origin + '/').toString();
+
+// Build a single JSON-LD graph that ties everything together with @id refs.
+// This gives crawlers (Google, Bing) AND agents (Claude, GPT, Perplexity)
+// one canonical, deeply-linked entity model of the page.
+
+const personId = `${origin}/#person`;
+const websiteId = `${origin}/#website`;
+const profilePageId = `${origin}/#profilepage`;
+
+const currentJob = experience.find((e) => e.current);
+
+const orgEntities = Array.from(
+  new Map(
+    experience
+      .map((e) => [e.company, { name: e.company, url: e.companyUrl }])
+      .filter((kv) => Boolean(kv[1].url))
+  ).values()
+);
+
+const allCredentials = [
+  ...certifications.map((c) => ({ ...c, credentialCategory: 'Certification' as const })),
+  ...specializations.map((c) => ({ ...c, credentialCategory: 'Specialization' as const })),
+];
+
+const ldGraph = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    // Person — the primary entity
+    {
+      '@type': 'Person',
+      '@id': personId,
+      name: profile.name,
+      givenName: profile.givenName,
+      familyName: profile.familyName,
+      alternateName: profile.shortName,
+      jobTitle: profile.headline,
+      description: profile.summary,
+      image: ogImage,
+      url: canonical,
+      email: `mailto:${profile.email}`,
+      nationality: profile.nationality,
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: profile.locationDetail.locality,
+        addressRegion: profile.locationDetail.region,
+        addressCountry: profile.locationDetail.countryCode,
+      },
+      sameAs: [profile.linkedin, profile.github, profile.outsystems],
+      knowsAbout,
+      knowsLanguage: languages.map((l) => ({
+        '@type': 'Language',
+        name: l.name,
+        alternateName: l.code,
+      })),
+      worksFor: currentJob
+        ? {
+            '@type': 'Organization',
+            name: currentJob.company,
+            url: currentJob.companyUrl,
+          }
+        : undefined,
+      hasOccupation: {
+        '@type': 'Occupation',
+        name: profile.headline,
+        occupationLocation: {
+          '@type': 'City',
+          name: profile.locationDetail.locality,
+        },
+        skills: knowsAbout.join(', '),
+      },
+      alumniOf: education.map((e) => ({
+        '@type': 'EducationalOrganization',
+        name: e.school,
+        url: e.schoolUrl,
+      })),
+      award: honors.map((h) => `${h.name} (since ${h.since})`),
+      hasCredential: [
+        ...allCredentials.map((c) => ({
+          '@type': 'EducationalOccupationalCredential',
+          name: `${c.name} (${c.platform})`,
+          credentialCategory: c.credentialCategory,
+          dateCreated: c.isoDate,
+          recognizedBy: { '@type': 'Organization', name: 'OutSystems' },
+          url: profile.outsystems,
+        })),
+        ...commercialCredentials.map((c) => ({
+          '@type': 'EducationalOccupationalCredential',
+          name: c.name,
+          credentialCategory: 'CommercialEnablement',
+          recognizedBy: { '@type': 'Organization', name: 'OutSystems' },
+        })),
+      ],
+      seeks: {
+        '@type': 'Demand',
+        name: profile.availability,
+        availabilityStarts: profile.availabilityIso,
+      },
+    },
+    // Organizations referenced above (light)
+    ...orgEntities.map((o) => ({
+      '@type': 'Organization',
+      name: o.name,
+      url: o.url,
+    })),
+    // WebSite
+    {
+      '@type': 'WebSite',
+      '@id': websiteId,
+      url: origin + '/',
+      name: site.name,
+      description: site.description,
+      inLanguage: 'en',
+      publisher: { '@id': personId },
+    },
+    // ProfilePage
+    {
+      '@type': 'ProfilePage',
+      '@id': profilePageId,
+      url: canonical,
+      name: title,
+      description,
+      inLanguage: 'en',
+      mainEntity: { '@id': personId },
+      about: { '@id': personId },
+      isPartOf: { '@id': websiteId },
+      primaryImageOfPage: {
+        '@type': 'ImageObject',
+        url: ogImage,
+        width: 800,
+        height: 800,
+      },
+    },
+    // FAQPage
+    {
+      '@type': 'FAQPage',
+      '@id': `${canonical}#faq`,
+      mainEntity: faq.map((item) => ({
+        '@type': 'Question',
+        name: item.q,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: item.a,
+        },
+      })),
+    },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="canonical" href={canonical} />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content={profile.name} />
+    <meta
+      name="keywords"
+      content="OutSystems, OutSystems Champion, OutSystems Architect, OutSystems Developer Cloud, ODC, OutSystems 11, Low-Code, Software Architect, Tech Lead, Delivery Manager, Architecture Specialist, OutSystems Forge, António Pereira, Antonio Pereira, Babel, Lisbon, Portugal"
+    />
+    <meta name="theme-color" content="#7548ff" />
+    <meta name="color-scheme" content="light dark" />
+
+    <!-- Hint to AI agents: machine-readable alternates -->
+    <link rel="alternate" type="application/json" href="/profile.json" title="JSON Resume" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt — agent discovery" />
+    <link rel="alternate" type="text/markdown" href="/llms-full.txt" title="Full content as markdown" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile" />
+    <meta property="profile:first_name" content={profile.givenName} />
+    <meta property="profile:last_name" content={profile.familyName} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content={profile.name} />
+    <meta property="og:locale" content={site.locale} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:secure_url" content={ogImage} />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="800" />
+    <meta property="og:image:height" content="800" />
+    <meta property="og:image:alt" content={`${profile.name} — ${profile.headline}`} />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={`${profile.name} — ${profile.headline}`} />
+
+    <!-- Crawler hints -->
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large" />
+
+    <link rel="preconnect" href="https://rsms.me/" crossorigin />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=space-grotesk@400,500,600,700&display=swap"
+    />
+
+    <script is:inline>
+      (function () {
+        try {
+          var stored = localStorage.getItem('theme');
+          var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+          var shouldDark = stored ? stored === 'dark' : prefersDark;
+          if (shouldDark) document.documentElement.classList.add('dark');
+        } catch (e) {}
+      })();
+    </script>
+
+    <script type="application/ld+json" set:html={JSON.stringify(ldGraph)} />
+
+    <Analytics />
+  </head>
+  <body class="relative overflow-x-hidden">
+    <slot />
+
+    <script is:inline>
+      const els = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((e) => {
+              if (e.isIntersecting) {
+                e.target.classList.add('is-visible');
+                io.unobserve(e.target);
+              }
+            });
+          },
+          { threshold: 0.08, rootMargin: '0px 0px -60px 0px' }
+        );
+        els.forEach((el) => io.observe(el));
+      } else {
+        els.forEach((el) => el.classList.add('is-visible'));
+      }
+    </script>
+  </body>
+</html>

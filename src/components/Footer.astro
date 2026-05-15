@@ -1,0 +1,47 @@
+---
+import { Icon } from 'astro-icon/components';
+import { profile } from '~/data/profile';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-ink-200 py-10 dark:border-ink-800">
+  <div class="container-page flex flex-col items-center justify-between gap-4 text-sm text-ink-500 sm:flex-row dark:text-ink-400">
+    <p>© {year} {profile.name}. Built with Astro & Tailwind.</p>
+    <div class="flex items-center gap-4">
+      <a
+        href={profile.linkedin}
+        target="_blank"
+        rel="noopener"
+        aria-label="LinkedIn"
+        class="transition-colors hover:text-brand-600 dark:hover:text-brand-300"
+      >
+        <Icon name="simple-icons:linkedin" class="h-4 w-4" />
+      </a>
+      <a
+        href={profile.outsystems}
+        target="_blank"
+        rel="noopener"
+        aria-label="OutSystems profile"
+        class="transition-colors hover:text-brand-600 dark:hover:text-brand-300"
+      >
+        <Icon name="lucide:award" class="h-4 w-4" />
+      </a>
+      <a
+        href={profile.github}
+        target="_blank"
+        rel="noopener"
+        aria-label="GitHub"
+        class="transition-colors hover:text-brand-600 dark:hover:text-brand-300"
+      >
+        <Icon name="simple-icons:github" class="h-4 w-4" />
+      </a>
+      <a
+        href={`mailto:${profile.email}`}
+        aria-label="Email"
+        class="transition-colors hover:text-brand-600 dark:hover:text-brand-300"
+      >
+        <Icon name="lucide:mail" class="h-4 w-4" />
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,39 @@
+---
+import { Icon } from 'astro-icon/components';
+import { publications } from '~/data/profile';
+---
+
+<section id="writing" class="section relative bg-ink-50/60 dark:bg-ink-900/30">
+  <div class="container-page">
+    <div class="reveal flex flex-wrap items-end justify-between gap-4">
+      <div class="max-w-2xl">
+        <span class="eyebrow">Writing</span>
+        <h2 class="section-title mt-3">Sharing what works.</h2>
+        <p class="mt-5 text-lg text-ink-600 dark:text-ink-300">
+          Patterns from production. Lessons that travel beyond a single project.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal mt-12 grid gap-5 md:grid-cols-2">
+      {publications.map((p) => (
+        <a
+          href={p.url}
+          target="_blank"
+          rel="noopener"
+          class="surface group relative flex flex-col gap-4 overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-soft dark:hover:border-brand-400/40"
+        >
+          <span class="eyebrow">Article</span>
+          <h3 class="display text-xl font-semibold leading-snug text-ink-900 transition-colors group-hover:text-brand-700 dark:text-ink-50 dark:group-hover:text-brand-300">
+            {p.title}
+          </h3>
+          <p class="text-sm leading-relaxed text-ink-600 dark:text-ink-300">{p.description}</p>
+          <span class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-300">
+            Read on LinkedIn
+            <Icon name="lucide:arrow-up-right" class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+          </span>
+        </a>
+      ))}
+    </div>
+  </div>
+</section>

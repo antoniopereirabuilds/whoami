@@ -1,0 +1,18 @@
+---
+// Cloudflare Web Analytics — privacy-first, cookieless.
+// Loads only in production builds and only if a token is configured.
+// The token is technically public (it appears in the rendered script tag)
+// but routing it through an env var keeps rotation as an ops change, not a code change.
+
+const token = import.meta.env.PUBLIC_CF_BEACON_TOKEN;
+const enabled = import.meta.env.PROD && typeof token === 'string' && token.length > 0;
+---
+
+{enabled && (
+  <script
+    is:inline
+    defer
+    src="https://static.cloudflareinsights.com/beacon.min.js"
+    data-cf-beacon={`{"token": "${token}"}`}
+  ></script>
+)}

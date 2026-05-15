@@ -1,0 +1,49 @@
+---
+import { Icon } from 'astro-icon/components';
+import { faq } from '~/data/profile';
+---
+
+<section id="faq" class="section relative">
+  <div class="container-page">
+    <div class="reveal max-w-3xl">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="section-title mt-3">Answers, in case you (or your AI) are wondering.</h2>
+      <p class="mt-5 text-lg text-ink-600 dark:text-ink-300">
+        Quick facts for recruiters, hiring managers, and the AI agents working on their behalf.
+      </p>
+    </div>
+
+    <div class="reveal mt-12 divide-y divide-ink-200 overflow-hidden rounded-2xl border border-ink-200 bg-white/40 dark:divide-ink-800 dark:border-ink-800 dark:bg-ink-900/30">
+      {faq.map((item, i) => (
+        <details
+          class="group"
+          open={i === 0 ? true : undefined}
+        >
+          <summary
+            class="flex cursor-pointer list-none items-center justify-between gap-4 px-6 py-5 transition-colors hover:bg-ink-50 dark:hover:bg-ink-900/60"
+          >
+            <h3 class="display text-base font-semibold text-ink-900 sm:text-lg dark:text-ink-50">
+              {item.q}
+            </h3>
+            <Icon
+              name="lucide:plus"
+              class="h-5 w-5 flex-shrink-0 text-ink-500 transition-transform duration-300 group-open:rotate-45"
+            />
+          </summary>
+          <div class="px-6 pb-6 text-[15px] leading-relaxed text-ink-700 dark:text-ink-300">
+            {item.a}
+          </div>
+        </details>
+      ))}
+    </div>
+
+    <p class="reveal mt-6 text-xs text-ink-500 dark:text-ink-400">
+      Prefer machine-readable formats?
+      <a href="/profile.json" class="underline hover:text-brand-700 dark:hover:text-brand-300">JSON Resume</a>
+      ·
+      <a href="/llms.txt" class="underline hover:text-brand-700 dark:hover:text-brand-300">llms.txt</a>
+      ·
+      <a href="/llms-full.txt" class="underline hover:text-brand-700 dark:hover:text-brand-300">llms-full.txt</a>
+    </p>
+  </div>
+</section>

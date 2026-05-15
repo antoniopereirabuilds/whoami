@@ -1,0 +1,55 @@
+---
+import { Icon } from 'astro-icon/components';
+import { skillGroups, languages } from '~/data/profile';
+
+const groupIcons: Record<string, string> = {
+  'Platform & Architecture': 'lucide:layers',
+  'Engineering': 'lucide:code-2',
+  'Leadership & Delivery': 'lucide:users',
+};
+---
+
+<section id="skills" class="section relative bg-ink-50/60 dark:bg-ink-900/30">
+  <div class="container-page">
+    <div class="reveal max-w-3xl">
+      <span class="eyebrow">Capabilities</span>
+      <h2 class="section-title mt-3">What I bring to the table.</h2>
+    </div>
+
+    <div class="reveal mt-12 grid gap-5 md:grid-cols-3">
+      {skillGroups.map((group) => (
+        <article class="surface flex flex-col gap-4 p-6 transition-colors hover:border-brand-500/60 dark:hover:border-brand-400/40">
+          <div class="flex items-center gap-3">
+            <span class="grid h-9 w-9 place-items-center rounded-xl bg-brand-600 text-white dark:bg-brand-500">
+              <Icon name={groupIcons[group.title] ?? 'lucide:sparkles'} class="h-4 w-4" />
+            </span>
+            <h3 class="display text-lg font-semibold">{group.title}</h3>
+          </div>
+          <ul class="flex flex-wrap gap-2">
+            {group.skills.map((s) => (
+              <li class="pill">{s}</li>
+            ))}
+          </ul>
+        </article>
+      ))}
+    </div>
+
+    <div class="reveal mt-10 surface flex flex-wrap items-center justify-between gap-4 p-6">
+      <div class="flex items-center gap-3">
+        <span class="grid h-9 w-9 place-items-center rounded-xl bg-ink-900 text-white dark:bg-white dark:text-ink-900">
+          <Icon name="lucide:languages" class="h-4 w-4" />
+        </span>
+        <h3 class="display text-lg font-semibold">Languages</h3>
+      </div>
+      <ul class="flex flex-wrap gap-2">
+        {languages.map((l) => (
+          <li class="pill">
+            <span class="font-semibold text-ink-900 dark:text-ink-50">{l.name}</span>
+            <span class="text-ink-400">·</span>
+            <span class="text-ink-600 dark:text-ink-300">{l.level}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>
