@@ -1,5 +1,5 @@
 export const site = {
-  url: 'https://antonioppereira.github.io',
+  url: 'https://antoniopereirabuilds.github.io/whoami',
   name: 'António Pereira — OutSystems Architect & Champion',
   description:
     'Personal site and CV of António Pereira, OutSystems Champion since 2021 and OutSystems Architect at Babel Group. 10+ years building scalable web and mobile applications. Open to senior architect and engineering leadership roles.',
@@ -32,8 +32,8 @@ export const profile = {
   linkedin: 'https://www.linkedin.com/in/antonioppereira/',
   github: 'https://github.com/antonioppereira',
   outsystems: 'https://www.outsystems.com/profile/olcy67xggw/',
-  photoUrl: '/portrait.jpg',
-  resumeUrl: '/Antonio-Pereira-CV.pdf',
+  photoUrl: 'portrait.jpg',
+  resumeUrl: 'Antonio-Pereira-CV.pdf',
   quote:
     'Finding the true form of the problem is more important than the answer that comes after.',
   metrics: [

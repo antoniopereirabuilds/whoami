@@ -1,6 +1,8 @@
 ---
 import { Icon } from 'astro-icon/components';
 import { profile } from '~/data/profile';
+
+const base = import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : `${import.meta.env.BASE_URL}/`;
 ---
 
 <section id="top" class="relative overflow-hidden pt-12 sm:pt-16">
@@ -78,7 +80,7 @@ import { profile } from '~/data/profile';
           <!-- Frame -->
           <div class="relative aspect-square w-[280px] overflow-hidden rounded-[2rem] border border-ink-200 bg-ink-100 shadow-soft sm:w-[340px] lg:w-[380px] xl:w-[420px] dark:border-ink-800 dark:bg-ink-900">
             <img
-              src={profile.photoUrl}
+              src={`${base}${profile.photoUrl}`}
               alt={`${profile.name} — ${profile.headline}`}
               width="800"
               height="800"

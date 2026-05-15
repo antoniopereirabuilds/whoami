@@ -43,7 +43,7 @@ export const GET: APIRoute = () => {
     basics: {
       name: profile.name,
       label: profile.headline,
-      image: new URL(profile.photoUrl, site.url).toString(),
+      image: `${site.url}/${profile.photoUrl}`,
       email: profile.email,
       url: site.url,
       summary: profile.summary,

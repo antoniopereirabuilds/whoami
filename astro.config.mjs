@@ -6,9 +6,8 @@ import icon from 'astro-icon';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://antonioppereira.github.io',
-  // Personal site repo (antonioppereira.github.io) serves from the root.
-  // If you instead deploy from a project repo, set base: '/<repo-name>'.
+  site: 'https://antoniopereirabuilds.github.io',
+  base: '/whoami',
   integrations: [
     tailwind({ applyBaseStyles: false }),
     sitemap(),
