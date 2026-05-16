@@ -259,14 +259,16 @@ export const publications = [
     title: 'Why you should add UUIDs to your database entities',
     description:
       'A practical case for surrogate UUIDs over auto-increment integers in enterprise OutSystems data models — and how to do it without paying the storage tax.',
-    url: 'https://www.linkedin.com/in/antonioppereira/recent-activity/posts/',
+    url: 'https://medium.com/kinetit/why-you-should-add-uuids-to-your-database-entities-9d095117fcb1',
+    publisher: 'KinetIT on Medium',
   },
   {
     title:
       'Automating ODC External Logic Deployments: Smart Versioning and Splitting Workflows in GitHub Actions',
     description:
       'How to ship OutSystems Developer Cloud external logic with intelligent versioning, fewer broken builds, and workflows that actually scale across teams.',
-    url: 'https://www.linkedin.com/in/antonioppereira/recent-activity/posts/',
+    url: 'https://itnext.io/automating-odc-external-logic-deployments-smart-versioning-and-splitting-workflows-in-github-5a9e859d3160',
+    publisher: 'ITNEXT',
   },
 ];
 

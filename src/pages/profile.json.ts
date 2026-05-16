@@ -98,7 +98,7 @@ export const GET: APIRoute = () => {
     certificates: allCerts,
     publications: publications.map((p) => ({
       name: p.title,
-      publisher: 'LinkedIn',
+      publisher: p.publisher,
       url: p.url,
       summary: p.description,
     })),

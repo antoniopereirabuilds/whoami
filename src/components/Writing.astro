@@ -23,13 +23,13 @@ import { publications } from '~/data/profile';
           rel="noopener"
           class="surface group relative flex flex-col gap-4 overflow-hidden p-7 transition-all duration-300 hover:-translate-y-1 hover:border-brand-500/60 hover:shadow-soft dark:hover:border-brand-400/40"
         >
-          <span class="eyebrow">Article</span>
+          <span class="eyebrow">{p.publisher}</span>
           <h3 class="display text-xl font-semibold leading-snug text-ink-900 transition-colors group-hover:text-brand-700 dark:text-ink-50 dark:group-hover:text-brand-300">
             {p.title}
           </h3>
           <p class="text-sm leading-relaxed text-ink-600 dark:text-ink-300">{p.description}</p>
           <span class="mt-auto inline-flex items-center gap-1.5 text-sm font-semibold text-brand-700 dark:text-brand-300">
-            Read on LinkedIn
+            Read the article
             <Icon name="lucide:arrow-up-right" class="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </span>
         </a>

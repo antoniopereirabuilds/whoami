@@ -150,6 +150,7 @@ export const GET: APIRoute = () => {
   lines.push('');
   for (const p of publications) {
     lines.push(`### ${p.title}`);
+    lines.push(`Publisher: ${p.publisher}`);
     lines.push(`Link: ${p.url}`);
     lines.push('');
     lines.push(p.description);
