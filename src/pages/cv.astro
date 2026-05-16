@@ -1,0 +1,700 @@
+---
+import '~/styles/global.css';
+import {
+  profile,
+  about,
+  experience,
+  education,
+  certifications,
+  specializations,
+  commercialCredentials,
+  honors,
+  skillGroups,
+  languages,
+} from '~/data/profile';
+
+const base = import.meta.env.BASE_URL.endsWith('/')
+  ? import.meta.env.BASE_URL
+  : `${import.meta.env.BASE_URL}/`;
+
+const title = `${profile.name} — CV`;
+const description = `Printable CV of ${profile.name}, ${profile.headline}.`;
+
+const allCreds = [
+  ...specializations.map((c) => ({ ...c, kind: 'Specialization' })),
+  ...certifications.map((c) => ({ ...c, kind: 'Certification' })),
+];
+
+const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="preconnect" href="https://rsms.me/" crossorigin />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://api.fontshare.com/v2/css?f[]=space-grotesk@500,600,700&display=swap"
+    />
+  </head>
+  <body class="cv-body">
+    <main class="cv-page">
+      <!-- Header -->
+      <header class="cv-header">
+        <div class="cv-header-main">
+          <h1 class="cv-name">{profile.name}</h1>
+          <p class="cv-headline">{profile.headline}</p>
+          <p class="cv-subheadline">{profile.subheadline}</p>
+        </div>
+        <aside class="cv-contact">
+          <div class="cv-contact-row">
+            <span class="cv-contact-label">Location</span>
+            <span>{profile.location}</span>
+          </div>
+          <div class="cv-contact-row">
+            <span class="cv-contact-label">Email</span>
+            <a href={`mailto:${profile.email}`}>{profile.email}</a>
+          </div>
+          <div class="cv-contact-row">
+            <span class="cv-contact-label">LinkedIn</span>
+            <a href={profile.linkedin}>linkedin.com/in/antonioppereira</a>
+          </div>
+          <div class="cv-contact-row">
+            <span class="cv-contact-label">OutSystems</span>
+            <a href={profile.outsystems}>outsystems.com/profile/olcy67xggw</a>
+          </div>
+          <div class="cv-contact-row">
+            <span class="cv-contact-label">GitHub</span>
+            <a href={profile.github}>github.com/antonioppereira</a>
+          </div>
+        </aside>
+      </header>
+
+      <!-- Champion strip -->
+      <section class="cv-honors">
+        {honors.map((h) => (
+          <div class="cv-honor">
+            <span class="cv-honor-tag">★ {h.name}</span>
+            <span class="cv-honor-detail">
+              <strong>Since {h.since}</strong> · 50+ Forge assets · Awarded by {h.issuer} for sustained technical excellence and community contribution
+            </span>
+          </div>
+        ))}
+      </section>
+
+      <!-- Summary -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Profile</h2>
+        <div class="cv-summary">
+          {about.paragraphs.slice(0, 2).map((p) => <p>{p}</p>)}
+        </div>
+      </section>
+
+      <!-- Experience -->
+      <section class="cv-section">
+        <h2 class="cv-section-title">Experience</h2>
+        <div class="cv-experience">
+          {experience.map((e) => (
+            <article class="cv-role">
+              <header class="cv-role-header">
+                <div class="cv-role-title">
+                  <span class="cv-role-name">{e.role}</span>
+                  <span class="cv-role-company"> · {e.company}</span>
+                </div>
+                <span class="cv-role-period">{formatPeriod(e.period)}</span>
+              </header>
+              <p class="cv-role-summary">{e.summary}</p>
+              {e.highlights.length > 1 && (
+                <ul class="cv-role-highlights">
+                  {e.highlights.map((h) => <li>{h}</li>)}
+                </ul>
+              )}
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <!-- Two-column block: Skills | Credentials -->
+      <section class="cv-section cv-two-col">
+        <div>
+          <h2 class="cv-section-title">Skills</h2>
+          <div class="cv-skills">
+            {skillGroups.map((g) => (
+              <div class="cv-skill-group">
+                <span class="cv-skill-label">{g.title}</span>
+                <span class="cv-skill-list">{g.skills.join(' · ')}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+        <div>
+          <h2 class="cv-section-title">Credentials</h2>
+          <ul class="cv-creds">
+            {allCreds.map((c) => (
+              <li>
+                <span class="cv-cred-name">{c.name}</span>
+                <span class="cv-cred-meta">
+                  <span class={`cv-cred-platform cv-cred-${c.platform.toLowerCase()}`}>{c.platform}</span>
+                  · {c.date}
+                </span>
+              </li>
+            ))}
+            {commercialCredentials.map((c) => (
+              <li>
+                <span class="cv-cred-name">{c.name}</span>
+                <span class="cv-cred-meta">Commercial</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <!-- Two-column block: Education | Languages -->
+      <section class="cv-section cv-two-col">
+        <div>
+          <h2 class="cv-section-title">Education</h2>
+          <ul class="cv-education">
+            {education.map((ed) => (
+              <li>
+                <div class="cv-edu-row">
+                  <span class="cv-edu-degree">{ed.degree}</span>
+                  <span class="cv-edu-period">{ed.period}</span>
+                </div>
+                <div class="cv-edu-school">{ed.school}</div>
+                {ed.detail && <div class="cv-edu-detail">{ed.detail}</div>}
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <h2 class="cv-section-title">Languages</h2>
+          <ul class="cv-langs">
+            {languages.map((l) => (
+              <li>
+                <span class="cv-lang-name">{l.name}</span>
+                <span class="cv-lang-level">{l.level} · {l.cefr}</span>
+              </li>
+            ))}
+          </ul>
+          <h2 class="cv-section-title cv-section-title--spaced">Availability</h2>
+          <p class="cv-availability">{profile.availability}. {profile.remote}.</p>
+        </div>
+      </section>
+
+      <footer class="cv-footer">
+        <span>Updated {new Date().toLocaleDateString('en-US', { year: 'numeric', month: 'long' })}</span>
+        <span>·</span>
+        <span>{profile.name} — {profile.headline}</span>
+        <span>·</span>
+        <span>{profile.email}</span>
+      </footer>
+
+      <!-- Download button (screen only) -->
+      <div class="cv-actions">
+        <a href={`${base}Antonio-Pereira-CV.pdf`} class="cv-download" download>
+          ↓ Download PDF
+        </a>
+        <a href={base} class="cv-back">← Back to site</a>
+      </div>
+    </main>
+
+    <style is:global>
+      :root {
+        --ink-50: #f7f7f8;
+        --ink-100: #ededee;
+        --ink-200: #d9d9dc;
+        --ink-400: #8b8b94;
+        --ink-500: #6d6d76;
+        --ink-700: #3f3f44;
+        --ink-800: #26262a;
+        --ink-900: #161618;
+        --brand-50: #f3f1ff;
+        --brand-500: #7548ff;
+        --brand-700: #5719e5;
+        --brand-900: #3c1495;
+      }
+
+      html, body {
+        background: var(--ink-100);
+        margin: 0;
+      }
+
+      .cv-body {
+        font-family: 'Inter', system-ui, sans-serif;
+        font-feature-settings: 'cv11', 'ss01', 'ss03';
+        color: var(--ink-900);
+        font-size: 10pt;
+        line-height: 1.45;
+        -webkit-font-smoothing: antialiased;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+      }
+
+      .cv-page {
+        background: white;
+        max-width: 210mm;
+        min-height: 297mm;
+        margin: 24px auto;
+        padding: 14mm 16mm;
+        box-shadow: 0 12px 40px -12px rgba(20, 20, 30, 0.18);
+        box-sizing: border-box;
+      }
+
+      /* Header */
+      .cv-header {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 12mm;
+        align-items: start;
+        padding-bottom: 6mm;
+        border-bottom: 1px solid var(--ink-200);
+      }
+
+      .cv-name {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 26pt;
+        font-weight: 700;
+        line-height: 1;
+        letter-spacing: -0.02em;
+        margin: 0;
+        color: var(--ink-900);
+      }
+
+      .cv-headline {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 13pt;
+        font-weight: 500;
+        margin: 6px 0 0;
+        color: var(--brand-700);
+      }
+
+      .cv-subheadline {
+        font-size: 9.5pt;
+        color: var(--ink-700);
+        margin: 8px 0 0;
+        max-width: 95mm;
+        line-height: 1.4;
+      }
+
+      .cv-contact {
+        font-size: 8.5pt;
+        color: var(--ink-700);
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+
+      .cv-contact-row {
+        display: grid;
+        grid-template-columns: 22mm 1fr;
+        gap: 4mm;
+      }
+
+      .cv-contact-label {
+        color: var(--ink-500);
+        text-transform: uppercase;
+        font-size: 7pt;
+        letter-spacing: 0.08em;
+        font-weight: 600;
+        padding-top: 1pt;
+      }
+
+      .cv-contact a {
+        color: var(--ink-900);
+        text-decoration: none;
+      }
+
+      .cv-contact a:hover {
+        color: var(--brand-700);
+      }
+
+      /* Champion strip */
+      .cv-honors {
+        margin: 4mm 0 5mm;
+      }
+
+      .cv-honor {
+        display: flex;
+        align-items: baseline;
+        gap: 4mm;
+        background: var(--brand-50);
+        border-left: 2pt solid var(--brand-500);
+        padding: 2.5mm 4mm;
+        border-radius: 1mm;
+      }
+
+      .cv-honor-tag {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-weight: 600;
+        font-size: 9.5pt;
+        color: var(--brand-700);
+        white-space: nowrap;
+        letter-spacing: -0.005em;
+      }
+
+      .cv-honor-detail {
+        font-size: 8.5pt;
+        color: var(--ink-700);
+        line-height: 1.4;
+      }
+
+      /* Sections */
+      .cv-section {
+        margin-top: 5mm;
+      }
+
+      .cv-section-title {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 9pt;
+        font-weight: 600;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--brand-700);
+        margin: 0 0 2.5mm;
+        padding-bottom: 1.5mm;
+        border-bottom: 0.5pt solid var(--ink-200);
+      }
+
+      .cv-section-title--spaced {
+        margin-top: 4mm;
+      }
+
+      /* Summary */
+      .cv-summary p {
+        margin: 0 0 2mm;
+        color: var(--ink-800);
+        font-size: 9.5pt;
+        line-height: 1.5;
+      }
+
+      /* Experience */
+      .cv-experience {
+        display: flex;
+        flex-direction: column;
+        gap: 3.5mm;
+      }
+
+      .cv-role {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .cv-role-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 6mm;
+        margin-bottom: 1mm;
+      }
+
+      .cv-role-title {
+        font-size: 10.5pt;
+      }
+
+      .cv-role-name {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-weight: 600;
+        color: var(--ink-900);
+      }
+
+      .cv-role-company {
+        font-weight: 500;
+        color: var(--ink-700);
+      }
+
+      .cv-role-period {
+        font-size: 8.5pt;
+        font-weight: 500;
+        color: var(--ink-500);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .cv-role-summary {
+        font-size: 9pt;
+        color: var(--ink-700);
+        margin: 0 0 1.5mm;
+        line-height: 1.45;
+      }
+
+      .cv-role-highlights {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 0.8mm;
+      }
+
+      .cv-role-highlights li {
+        position: relative;
+        padding-left: 4mm;
+        font-size: 9pt;
+        color: var(--ink-800);
+        line-height: 1.45;
+      }
+
+      .cv-role-highlights li::before {
+        content: '';
+        position: absolute;
+        left: 0.5mm;
+        top: 1.6mm;
+        width: 1mm;
+        height: 1mm;
+        background: var(--brand-500);
+        border-radius: 50%;
+      }
+
+      /* Two-column blocks */
+      .cv-two-col {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 10mm;
+      }
+
+      /* Skills */
+      .cv-skills {
+        display: flex;
+        flex-direction: column;
+        gap: 2mm;
+      }
+
+      .cv-skill-group {
+        display: grid;
+        grid-template-columns: 28mm 1fr;
+        gap: 3mm;
+        align-items: baseline;
+      }
+
+      .cv-skill-label {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 8pt;
+        font-weight: 600;
+        color: var(--ink-500);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+
+      .cv-skill-list {
+        font-size: 9pt;
+        color: var(--ink-800);
+        line-height: 1.5;
+      }
+
+      /* Credentials */
+      .cv-creds {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2mm;
+      }
+
+      .cv-creds li {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 3mm;
+        font-size: 9pt;
+        line-height: 1.4;
+      }
+
+      .cv-cred-name {
+        color: var(--ink-900);
+        font-weight: 500;
+      }
+
+      .cv-cred-meta {
+        font-size: 8pt;
+        color: var(--ink-500);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .cv-cred-platform {
+        display: inline-block;
+        padding: 0.3mm 1.2mm;
+        border-radius: 1mm;
+        font-size: 7pt;
+        font-weight: 600;
+        letter-spacing: 0.05em;
+        background: var(--brand-50);
+        color: var(--brand-700);
+      }
+
+      .cv-cred-o11 {
+        background: var(--ink-100);
+        color: var(--ink-700);
+      }
+
+      /* Education */
+      .cv-education {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5mm;
+      }
+
+      .cv-edu-row {
+        display: flex;
+        justify-content: space-between;
+        gap: 4mm;
+      }
+
+      .cv-edu-degree {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: var(--ink-900);
+      }
+
+      .cv-edu-period {
+        font-size: 8.5pt;
+        color: var(--ink-500);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .cv-edu-school {
+        font-size: 9pt;
+        color: var(--ink-700);
+        margin-top: 0.5mm;
+      }
+
+      .cv-edu-detail {
+        font-size: 8.5pt;
+        color: var(--ink-500);
+        margin-top: 0.5mm;
+        line-height: 1.4;
+      }
+
+      /* Languages */
+      .cv-langs {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2mm;
+      }
+
+      .cv-langs li {
+        display: flex;
+        justify-content: space-between;
+        font-size: 9pt;
+      }
+
+      .cv-lang-name {
+        font-weight: 500;
+        color: var(--ink-900);
+      }
+
+      .cv-lang-level {
+        color: var(--ink-500);
+        font-size: 8.5pt;
+      }
+
+      .cv-availability {
+        font-size: 9pt;
+        color: var(--ink-700);
+        margin: 0;
+        line-height: 1.45;
+      }
+
+      /* Footer */
+      .cv-footer {
+        margin-top: 6mm;
+        padding-top: 3mm;
+        border-top: 0.5pt solid var(--ink-200);
+        font-size: 7.5pt;
+        color: var(--ink-500);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5mm;
+      }
+
+      /* Screen-only download actions */
+      .cv-actions {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        gap: 8px;
+        z-index: 10;
+      }
+
+      .cv-download,
+      .cv-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+        padding: 8px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        font-weight: 600;
+        text-decoration: none;
+        font-family: 'Inter', system-ui, sans-serif;
+        transition: all 0.2s;
+      }
+
+      .cv-download {
+        background: var(--ink-900);
+        color: white;
+      }
+
+      .cv-download:hover {
+        background: var(--brand-600, var(--brand-500));
+      }
+
+      .cv-back {
+        background: white;
+        color: var(--ink-700);
+        border: 1px solid var(--ink-200);
+      }
+
+      .cv-back:hover {
+        border-color: var(--brand-500);
+        color: var(--brand-700);
+      }
+
+      /* Print */
+      @page {
+        size: A4;
+        margin: 14mm 16mm;
+      }
+
+      @media print {
+        html, body {
+          background: white;
+        }
+
+        .cv-page {
+          margin: 0;
+          padding: 0;
+          box-shadow: none;
+          max-width: none;
+          min-height: 0;
+        }
+
+        .cv-actions {
+          display: none;
+        }
+
+        a {
+          color: inherit;
+          text-decoration: none;
+        }
+      }
+    </style>
+  </body>
+</html>
