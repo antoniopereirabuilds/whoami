@@ -11,6 +11,9 @@ import {
   honors,
   publications,
   languages,
+  talks,
+  recommendations,
+  selectedClients,
 } from '~/data/profile';
 
 // JSON Resume v1.0.0 — https://jsonresume.org/schema/
@@ -110,10 +113,26 @@ export const GET: APIRoute = () => {
       language: l.name,
       fluency: l.level,
     })),
+    references: recommendations.map((r) => ({
+      name: `${r.name}${r.role || r.company ? ` — ${[r.role, r.company].filter(Boolean).join(', ')}` : ''}`,
+      reference: r.text.trim(),
+    })),
     meta: {
       canonical: `${site.url}/profile.json`,
       version: '1.0.0',
       lastModified: new Date().toISOString(),
+      // Non-standard JSON Resume extensions for AI agents and richer parsers
+      x_selectedClients: selectedClients,
+      x_talks: talks.map((t) => ({
+        title: t.title,
+        date: t.date,
+        venue: t.venue,
+        partnership: t.partnership,
+        location: t.location,
+        coSpeaker: t.coSpeaker,
+        description: t.description,
+        url: t.url,
+      })),
     },
   };
 

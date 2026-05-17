@@ -11,7 +11,14 @@ import {
   honors,
   skillGroups,
   languages,
+  talks,
+  selectedClients,
 } from '~/data/profile';
+
+const formatTalkDate = (iso: string) => {
+  const d = new Date(iso);
+  return d.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+};
 
 const base = import.meta.env.BASE_URL.endsWith('/')
   ? import.meta.env.BASE_URL
@@ -81,7 +88,11 @@ const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
       <section class="cv-honors">
         {honors.map((h) => (
           <div class="cv-honor">
-            <span class="cv-honor-tag">★ {h.name}</span>
+            {h.url ? (
+              <a href={h.url} class="cv-honor-tag">★ {h.name}</a>
+            ) : (
+              <span class="cv-honor-tag">★ {h.name}</span>
+            )}
             <span class="cv-honor-detail">
               <strong>Since {h.since}</strong> · 50+ Forge assets · Awarded by {h.issuer} for sustained technical excellence and community contribution
             </span>
@@ -107,19 +118,58 @@ const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
                 <div class="cv-role-title">
                   <span class="cv-role-name">{e.role}</span>
                   <span class="cv-role-company"> · {e.company}</span>
+                  {e.via && (
+                    <span class="cv-role-via"> · via {e.via}</span>
+                  )}
+                  {e.client && (
+                    <span class="cv-role-client"> · {e.client}</span>
+                  )}
                 </div>
                 <span class="cv-role-period">{formatPeriod(e.period)}</span>
               </header>
+              {(e.clientIndustry || e.clientDescription) && (
+                <p class="cv-role-client-context">
+                  {e.clientIndustry && (
+                    <span class="cv-role-industry">{e.clientIndustry}</span>
+                  )}
+                  {e.clientIndustry && e.clientDescription && ' — '}
+                  {e.clientDescription}
+                </p>
+              )}
+              {e.project && (
+                <p class="cv-role-project">{e.project}</p>
+              )}
               <p class="cv-role-summary">{e.summary}</p>
               {e.highlights.length > 1 && (
                 <ul class="cv-role-highlights">
                   {e.highlights.map((h) => <li>{h}</li>)}
                 </ul>
               )}
+              {e.technologies && e.technologies.length > 0 && (
+                <p class="cv-role-tech">
+                  <span class="cv-role-tech-label">Tech</span>
+                  {e.technologies.join(' · ')}
+                </p>
+              )}
             </article>
           ))}
         </div>
       </section>
+
+      <!-- Selected clients -->
+      {selectedClients.length > 0 && (
+        <section class="cv-section">
+          <h2 class="cv-section-title">Selected Clients</h2>
+          <dl class="cv-clients">
+            {selectedClients.map((g) => (
+              <div class="cv-client-row">
+                <dt class="cv-client-industry">{g.industry}</dt>
+                <dd class="cv-client-brands">{g.brands.join(' · ')}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
 
       <!-- Two-column block: Skills | Credentials -->
       <section class="cv-section cv-two-col">
@@ -155,6 +205,28 @@ const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
           </ul>
         </div>
       </section>
+
+      <!-- Speaking -->
+      {talks.length > 0 && (
+        <section class="cv-section">
+          <h2 class="cv-section-title">Speaking</h2>
+          <ul class="cv-talks">
+            {talks.map((t) => (
+              <li>
+                <div class="cv-talk-row">
+                  <span class="cv-talk-title">{t.title}</span>
+                  <span class="cv-talk-date">{formatTalkDate(t.date)}</span>
+                </div>
+                <div class="cv-talk-meta">
+                  {t.venue}
+                  {t.partnership && <> · {t.partnership}</>}
+                  {t.coSpeaker && <> · with {t.coSpeaker}</>}
+                </div>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
 
       <!-- Two-column block: Education | Languages -->
       <section class="cv-section cv-two-col">
@@ -409,6 +481,17 @@ const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
         color: var(--ink-700);
       }
 
+      .cv-role-client {
+        font-weight: 500;
+        color: var(--brand-700);
+      }
+
+      .cv-role-via {
+        font-weight: 400;
+        color: var(--ink-500);
+        font-style: italic;
+      }
+
       .cv-role-period {
         font-size: 8.5pt;
         font-weight: 500;
@@ -417,11 +500,53 @@ const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
         font-variant-numeric: tabular-nums;
       }
 
+      .cv-role-project {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 9pt;
+        font-weight: 500;
+        color: var(--ink-700);
+        margin: 0 0 1mm;
+        font-style: italic;
+      }
+
+      .cv-role-client-context {
+        font-size: 8.5pt;
+        color: var(--ink-700);
+        margin: 0 0 1mm;
+        line-height: 1.4;
+      }
+
+      .cv-role-industry {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-weight: 600;
+        color: var(--brand-700);
+        text-transform: uppercase;
+        font-size: 7pt;
+        letter-spacing: 0.08em;
+      }
+
       .cv-role-summary {
         font-size: 9pt;
         color: var(--ink-700);
         margin: 0 0 1.5mm;
         line-height: 1.45;
+      }
+
+      .cv-role-tech {
+        font-size: 8pt;
+        color: var(--ink-500);
+        margin: 1.2mm 0 0;
+        line-height: 1.4;
+      }
+
+      .cv-role-tech-label {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-size: 7pt;
+        color: var(--ink-700);
+        margin-right: 2mm;
       }
 
       .cv-role-highlights {
@@ -533,6 +658,85 @@ const formatPeriod = (p: string) => p.replace(' — Present', ' — Now');
       .cv-cred-o11 {
         background: var(--ink-100);
         color: var(--ink-700);
+      }
+
+      /* Selected Clients */
+      .cv-clients {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5mm;
+      }
+
+      .cv-client-row {
+        display: grid;
+        grid-template-columns: 36mm 1fr;
+        gap: 4mm;
+        align-items: baseline;
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .cv-client-industry {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 8pt;
+        font-weight: 600;
+        color: var(--ink-500);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        margin: 0;
+      }
+
+      .cv-client-brands {
+        font-size: 9pt;
+        color: var(--ink-900);
+        font-weight: 500;
+        margin: 0;
+        line-height: 1.5;
+      }
+
+      /* Speaking */
+      .cv-talks {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        gap: 2mm;
+      }
+
+      .cv-talks li {
+        page-break-inside: avoid;
+        break-inside: avoid;
+      }
+
+      .cv-talk-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        gap: 4mm;
+      }
+
+      .cv-talk-title {
+        font-family: 'Space Grotesk', 'Inter', sans-serif;
+        font-size: 9.5pt;
+        font-weight: 600;
+        color: var(--ink-900);
+      }
+
+      .cv-talk-date {
+        font-size: 8.5pt;
+        color: var(--ink-500);
+        white-space: nowrap;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .cv-talk-meta {
+        font-size: 8.5pt;
+        color: var(--ink-700);
+        margin-top: 0.5mm;
+        line-height: 1.4;
       }
 
       /* Education */

@@ -1,0 +1,38 @@
+---
+import { selectedClients } from '~/data/profile';
+---
+
+{selectedClients.length > 0 && (
+  <section id="clients" class="section relative bg-ink-50/60 dark:bg-ink-900/30">
+    <div class="container-page">
+      <div class="reveal max-w-3xl">
+        <span class="eyebrow">Selected Clients</span>
+        <h2 class="section-title mt-3">Worked with serious organizations.</h2>
+        <p class="mt-5 text-lg text-ink-600 dark:text-ink-300">
+          Public sector, automotive, telecom, healthcare, insurance, banking — direct
+          client work spanning the OutSystems and broader enterprise ecosystem.
+        </p>
+      </div>
+
+      <dl class="reveal mt-12 divide-y divide-ink-200 overflow-hidden rounded-2xl border border-ink-200 bg-white/40 dark:divide-ink-800 dark:border-ink-800 dark:bg-ink-900/30">
+        {selectedClients.map((g) => (
+          <div class="grid gap-4 px-6 py-5 sm:grid-cols-[180px_1fr] sm:items-baseline sm:gap-6 sm:px-8">
+            <dt class="eyebrow text-ink-500 dark:text-ink-400">
+              {g.industry}
+            </dt>
+            <dd class="flex flex-wrap items-baseline gap-x-3 gap-y-1.5 text-[15px] text-ink-900 dark:text-ink-100">
+              {g.brands.map((brand, idx) => (
+                <>
+                  <span class="font-semibold">{brand}</span>
+                  {idx < g.brands.length - 1 && (
+                    <span class="text-ink-400" aria-hidden="true">·</span>
+                  )}
+                </>
+              ))}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </section>
+)}

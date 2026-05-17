@@ -1,6 +1,6 @@
 # AI Usage Policy
 
-Site: António Pereira — Personal CV (https://antonioppereira.github.io)
+Site: António Pereira — Personal CV (https://antoniopereirabuilds.github.io/whoami/)
 Owner: António Pereira <antonio.pereira.professional@outlook.com>
 Last updated: 2026-05
 
@@ -14,7 +14,7 @@ talent-discovery systems, and similar tools.
 ## Policy
 
 - Indexing:    ALLOWED for all AI crawlers and search engines.
-- Quoting:     ALLOWED with attribution to https://antonioppereira.github.io/.
+- Quoting:     ALLOWED with attribution to https://antoniopereirabuilds.github.io/whoami/.
 - Summarizing: ALLOWED. Encouraged to link back as the canonical source.
 - Training:    ALLOWED.
 - Reproduction:ALLOWED with attribution. Content licensed under CC BY 4.0

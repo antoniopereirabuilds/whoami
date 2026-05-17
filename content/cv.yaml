@@ -1,0 +1,1041 @@
+# ============================================================
+# CV CONTENT POOL — single source of truth
+# ============================================================
+#
+# Edit this file to update everything that appears on the live
+# site, the printed CV, the JSON Resume export, llms.txt and
+# llms-full.txt.
+#
+# Variants
+# --------
+# Each item below can declare `variants: [name, name]` to say
+# which CVs it should appear in. If `variants:` is omitted, the
+# item appears in ALL variants (the common case).
+#
+# Defined variants:
+#   site  — what shows on antoniopereirabuilds.github.io/whoami
+#   full  — exhaustive LinkedIn-equivalent depth (long PDF)
+#
+# Per-variant text overrides (headline, summary, etc.) can use
+# a map keyed by variant name. A plain string applies to all.
+# ============================================================
+
+variants:
+  site:
+    label: Live site
+    description: Curated, 6 most relevant roles for the live web profile.
+  full:
+    label: Full history
+    description: LinkedIn-equivalent depth — student-era, every consulting engagement, extracurriculars.
+
+# ──────────────────────────────────────────────────
+# Static site config (URLs, locale)
+# ──────────────────────────────────────────────────
+site:
+  url: https://antoniopereirabuilds.github.io/whoami
+  name: António Pereira — OutSystems Architect & Champion
+  description: >-
+    Personal site and CV of António Pereira, OutSystems Champion since 2022 and
+    OutSystems Architect. 10+ years building scalable web and
+    mobile applications. Open to senior architect and engineering leadership
+    roles.
+  locale: en_US
+
+# ──────────────────────────────────────────────────
+# Profile basics
+# ──────────────────────────────────────────────────
+profile:
+  name: António Pereira
+  givenName: António
+  familyName: Pereira
+  shortName: António
+  initials: AP
+
+  # Headline — per-variant override
+  headline:
+    site: OutSystems Architect & Champion
+    full: OutSystems Champion · Certified Expert · Leading Teams to Deliver Business Value
+
+  # Summary — per-variant override
+  summary:
+    site: >-
+      Senior OutSystems engineer and architect with a decade of experience
+      designing, delivering, and scaling enterprise applications. OutSystems
+      Champion since 2022 with 50+ assets published on the OutSystems Forge.
+      Career spans R&D engineering at OutSystems, delivery management for
+      enterprise consultancies, and current architect role at Babel Group.
+    full: |
+      "Finding the true form of the problem is more important than the answer that comes after."
+
+      As a seasoned software engineer with over 10 years of experience, I have developed expertise in building scalable and reliable web and mobile applications using OutSystems and other technologies. I am passionate about developing innovative solutions that meet business requirements and exceed user expectations.
+
+      Throughout my career, I have worked in various roles and industries, ranging from start-ups to enterprise-level organizations. As a result, I have gained experience in leading development teams, managing client relationships, and collaborating with stakeholders to ensure the timely delivery of projects.
+
+      I am skilled in OutSystems, .NET, C#, and SQL Server, among other programming languages and tools. I am also adept at using agile methodologies to manage projects and ensure quality and efficiency. I am constantly seeking opportunities to grow my skills and knowledge, and I am always willing to take on new challenges.
+
+  subheadline: I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
+
+  location: Lisbon, Portugal
+  locationDetail:
+    locality: Lisbon
+    region: Lisbon
+    country: Portugal
+    countryCode: PT
+  nationality: Portuguese
+  availability: Open to senior architect & engineering leadership roles
+  availabilityIso: 2026-01-01
+  remote: Open to remote across EU & UK
+
+  email: antonio.pereira.professional@outlook.com
+  linkedin: https://www.linkedin.com/in/antonioppereira/
+  github: https://github.com/antonioppereira
+  outsystems: https://www.outsystems.com/profile/olcy67xggw/
+
+  photoUrl: portrait.jpg
+  resumeUrl: Antonio-Pereira-CV.pdf
+
+  quote: Finding the true form of the problem is more important than the answer that comes after.
+
+# Hero metrics
+metrics:
+  - { value: "10+",         label: "Years in software" }
+  - { value: "Since 2022",  label: "OutSystems Champion" }
+  - { value: "50+",         label: "Assets on OutSystems Forge (O11 & ODC)" }
+  - { value: "10",          label: "OutSystems credentials" }
+
+# ──────────────────────────────────────────────────
+# About — long-form prose paragraphs
+# ──────────────────────────────────────────────────
+about:
+  - text: I'm a senior software engineer and architect with a decade of building scalable web and mobile applications — most of that time spent close to the OutSystems platform, from inside R&D to leading delivery teams for enterprise clients.
+  - text: "I've shipped product features at OutSystems itself, set the technical direction for delivery teams as a Delivery Manager, and now design and audit enterprise architectures at Babel. The thread through all of it: turning ambiguous business problems into systems that are robust, fast to evolve, and a pleasure to maintain."
+  - text: Beyond the code, I care about how teams work. I've built knowledge bases, run certification tracks, mentored developers into seniors, and aligned stakeholders around technical decisions that actually stick.
+  - text: Based in Lisbon, where I live with my wife and three kids — they are the reason I optimize for clarity and the reason I keep showing up.
+
+# ──────────────────────────────────────────────────
+# Experience — primary curated roles, then deep history
+# ──────────────────────────────────────────────────
+experience:
+  # ---- Curated (appears on site + full) ----
+
+  - company: Babel
+    companyUrl: https://www.babelgroup.com/
+    role: OutSystems Architect
+    period: Jun 2024 — Present
+    startDate: 2024-06
+    location: Lisbon, Portugal
+    current: true
+    variants: [site]
+    summary: Designs and audits OutSystems enterprise solutions; provides architectural guidance and mentors delivery teams across business-critical accounts.
+    highlights:
+      - Helped position Babel as a Top OutSystems Partner Worldwide and the #1 OutSystems Partner in Portugal during this tenure.
+      - Design and audit OutSystems solutions to ensure they meet technical standards and align with long-term business goals.
+      - Provide expert guidance on complex architectural decisions — robustness, scalability, and maintainability over short-term shortcuts.
+      - Partner with delivery teams to unblock projects, mentor engineers, and raise the bar on performance and quality.
+      - Build business-critical solutions for the most demanding accounts, leveraging deep platform knowledge to handle the edge cases nobody else wants to touch.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    role: OutSystems Success Manager
+    period: Feb 2022 — Jul 2024
+    startDate: 2022-02
+    endDate: 2024-07
+    location: Lisbon, Portugal
+    variants: [site]
+    summary: Led the OutSystems practice — trained developers, owned architectural reviews and estimations, and built KinetIT's OutSystems Knowledge Base.
+    highlights:
+      - Helped drive the KinetIT OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge.
+      - Led the OutSystems practice — trained and coached developers through certifications, kept the team current on platform releases, and grew the OutSystems skill base inside the org.
+      - Built the OutSystems Knowledge Base — a centralized repository of patterns, code samples, and docs that cut ramp-up time for new projects.
+      - Owned architectural reviews, estimations, and POCs across the practice; the technical voice for new opportunities.
+      - Delivered projects end-to-end against budget and timeline while keeping stakeholders aligned.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    role: Delivery Manager
+    period: Jun 2019 — Feb 2022
+    startDate: 2019-06
+    endDate: 2022-02
+    location: Lisbon, Portugal
+    variants: [site]
+    summary: Managed OutSystems delivery teams as both technical lead and people manager; embedded with partner consultancies on critical engagements.
+    highlights:
+      - Managed OutSystems delivery teams as both technical lead and people manager.
+      - Embedded with Do iT Lean for a single OutSystems delivery project during this period.
+
+  - company: Outfit (now Devoteam)
+    role: Tech Lead · OutSystems Consultant
+    period: Mar 2018 — May 2019
+    startDate: 2018-03
+    endDate: 2019-05
+    location: Lisbon, Portugal
+    variants: [site]
+    summary: OutSystems Tech Lead across consulting engagements — owned product architecture, code quality, and team mentoring across client projects.
+    highlights:
+      - Tech-led a from-scratch OutSystems recruitment management product for Bold, plus an offline-capable branch front-office banking solution for EuroBic (engagement via KPMG).
+      - Defined application architecture for scalability and performance; enforced OutSystems standards (Architecture Canvas, 4-Layer Canvas) across both engagements.
+      - Mentored developers, owned estimation and delivery planning, and partnered with UX/UI, QA, DevOps and client business teams.
+
+  - company: OutSystems
+    companyUrl: https://www.outsystems.com/
+    role: Software Engineer · Service Studio team (R&D)
+    period: Nov 2016 — Mar 2018
+    startDate: 2016-11
+    endDate: 2018-03
+    location: Linda-a-Velha, Portugal
+    variants: [site]
+    summary: Built features inside Service Studio — the IDE used by every OutSystems developer — owning developer experience for frontend app building.
+    highlights:
+      - Built features inside Service Studio — the IDE used by every OutSystems developer.
+      - Owned the developer experience for frontend application building on the platform.
+
+  - company: OutSystems
+    companyUrl: https://www.outsystems.com/
+    role: Knowledge Engineer
+    period: Sep 2014 — Oct 2016
+    startDate: 2014-09
+    endDate: 2016-10
+    location: Linda-a-Velha, Portugal
+    variants: [site]
+    summary: User advocate inside R&D — steered platform design toward simplicity, consistency, and learnability; wrote and maintained product documentation.
+    highlights:
+      - User advocate inside R&D — steered platform design toward simplicity, consistency, and learnability.
+      - Wrote and maintained product copy, how-tos, reference docs, and API documentation.
+      - Facilitated user tests to validate new feature UX before they shipped.
+
+  # ──────────────────────────────────────────────────
+  # Client engagements (full variant only)
+  # ──────────────────────────────────────────────────
+  # Project-level granularity sourced from the Babel commercial CV.
+  # Each entry pairs a customer (`client`) and a named `project` with
+  # the employing company. Multiple parallel engagements per period
+  # are normal for consulting work.
+
+  - company: Babel
+    companyUrl: https://www.babelgroup.com/
+    client: IRN — Instituto dos Registos e do Notariado
+    clientIndustry: Public sector · Government registries
+    clientDescription: Portuguese government institute responsible for civil, commercial, and property registry services — the system of record for births, deaths, marriages, companies, and real estate nationwide.
+    project: Frontend support modules for registry systems
+    projectDescription: Apoio e suporte aos sistemas de registo do IRN — frontend platform + AI-assisted development workflows.
+    role: Architect · Frontend
+    period: Feb 2026 — May 2026
+    startDate: 2026-02
+    endDate: 2026-05
+    location: Lisbon, Portugal
+    current: true
+    variants: [full]
+    technologies: [TypeScript, React, REST API, .NET]
+    summary: Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.
+    highlights:
+      - Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.
+      - Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.
+      - Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.
+      - Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.
+      - Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle.
+
+  - company: Babel
+    companyUrl: https://www.babelgroup.com/
+    client: CMVM — Comissão do Mercado de Valores Mobiliários
+    clientIndustry: Public sector · Financial regulation
+    clientDescription: Portuguese securities and capital markets regulator — supervises listed companies, investment funds, and financial intermediaries operating in Portugal.
+    project: Low-code digital channels (additional scope)
+    projectDescription: Low-code application development for the Portuguese securities/capital-markets regulator.
+    role: Architect · LowCode
+    period: Sep 2025 — Present
+    startDate: 2025-09
+    location: Lisbon, Portugal
+    current: true
+    variants: [full]
+    technologies: [OutSystems]
+    summary: Architected OutSystems solutions for the Portuguese securities/capital-markets regulator, ensuring compliance with supervisory and reporting requirements over regulated entities.
+    highlights:
+      - Defined OutSystems solution architecture for CMVM projects, ensuring compliance with regulatory requirements for capital markets and securities oversight.
+      - Designed application structure and data model supporting supervision, registration, reporting, and inspection processes over regulated entities.
+      - Ran technical audits — performance, scalability, security, technical debt — and produced recommendation reports for in-flight projects.
+      - Validated architecture and design decisions against OutSystems best practices (Architecture Canvas, 4-Layer Canvas) and CMVM's internal standards.
+      - Supported delivery teams on complex technical challenges — legacy-system integrations, large-data processing, regulatory business-rule implementation.
+
+  - company: Babel
+    companyUrl: https://www.babelgroup.com/
+    client: NOS Technology
+    clientIndustry: Telecommunications
+    clientDescription: Technology arm of NOS — Portugal's leading cable, internet, fixed and mobile telecom operator (~5M customers, listed on Euronext Lisbon).
+    project: Plataforma Benefícios V2
+    projectDescription: Employee benefits submission and management platform with SAP HR + Active Directory integration.
+    role: Architect · LowCode
+    period: Sep 2025 — Mar 2026
+    startDate: 2025-09
+    endDate: 2026-03
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems, REST API]
+    summary: Architected an OutSystems platform for NOS employee benefits — multi-benefit catalog, self-service portal, configurable eligibility rules, and integration with NOS core HR systems.
+    highlights:
+      - Architected an OutSystems platform for employee benefits (health, education, well-being, mobility, insurance, partnerships, incentives) with eligibility rules configurable by role, seniority, level and contract type.
+      - Designed the employee self-service portal with submission, tracking, plafond visibility, history, and the submit/validate/approve workflow with auto-routing by benefit type and approval hierarchy.
+      - Led the integration strategy with NOS core systems (SAP HR, Active Directory) for employee, hierarchy, and organizational-structure sync.
+      - Designed HR management dashboards (adoption per benefit, plafond consumption, cost trends, satisfaction) and a role-based access model (employee, manager, HR, admin, auditor) with encryption of personal/financial data.
+      - Supervised delivery teams technically — architecture and code reviews, OutSystems best-practices enforcement (Architecture Canvas, 4-Layer Canvas), and a dynamic-config model for adding new benefits without code changes.
+
+  - company: Babel
+    companyUrl: https://www.babelgroup.com/
+    client: IRN — Instituto dos Registos e do Notariado
+    clientIndustry: Public sector · Government registries
+    clientDescription: Portuguese government institute responsible for civil, commercial, and property registry services — the system of record for births, deaths, marriages, companies, and real estate nationwide.
+    project: Serviços OutSystems — Lote 4
+    projectDescription: Unified platform for submission and processing of registry requests — full tech-stack redesign from OutSystems to .NET / microservices + React frontend.
+    role: Solution Architect · Team Leader
+    period: Oct 2024 — Jun 2025
+    startDate: 2024-10
+    endDate: 2025-06
+    location: Lisbon, Portugal
+    variants: [site, full]
+    technologies: [.NET Core, REST API, API Management (ApiSix), React, Next.js, TypeScript, Microservices, Containers, Jenkins, ArgoCD, Sonatype Nexus, GitLab]
+    summary: Solution Architect and Team Leader on a nationally-critical Portuguese government program — re-platforming IRN's request submission and processing onto .NET Core microservices with a React/Next.js frontend.
+    highlights:
+      - Acted as Solution Architect and Team Leader for a nationally-critical Portuguese government project — unified platform for IRN request submission and processing, with full tech redesign and database remodeling.
+      - Led a multidisciplinary team of 10 inside a wider program of 70+ people across business and technology streams; served as the bridge between business and technology, aligning technical solutions with business needs.
+      - Drove the re-platform from OutSystems to .NET Core / microservices / containers with a Next.js / React / TypeScript frontend and ApiSix API Gateway for performance, security and scalability.
+      - Built the CI/CD foundation with Jenkins, ArgoCD, Sonatype Nexus Repository, and GitLab.
+      - Operated in a context of business and technical modernization, leading prioritization, stakeholder negotiation, and architecture decisions across the program.
+
+  - company: Babel
+    companyUrl: https://www.babelgroup.com/
+    role: OutSystems Architect · Practice & cross-engagement support
+    period: Jun 2024 — Present
+    startDate: 2024-06
+    location: Lisbon, Portugal
+    current: true
+    variants: [full]
+    summary: Architectural leadership across Babel's OutSystems practice in parallel with named client engagements — cross-account audits, pre-sales architecture, mentoring, and contribution to firm-wide platform recognition.
+    highlights:
+      - Helped position Babel as a Top OutSystems Partner Worldwide and the #1 OutSystems Partner in Portugal during this tenure.
+      - Provided architectural guidance and audits across multiple parallel client engagements, applying OutSystems best practices (Architecture Canvas, 4-Layer Canvas) consistently across the portfolio.
+      - Served as the technical voice for inbound OutSystems opportunities — pre-sales scoping, technical proposal defence, and POC delivery.
+      - Mentored delivery teams across business-critical accounts, partnering with engineers to unblock complex architectural challenges and raise the bar on performance and quality.
+      - Represented Babel's OutSystems practice in the community as an OutSystems Champion — sustained Forge contributions, partner-network engagement, and community presence.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: IHRU — Instituto da Habitação e da Reabilitação Urbana
+    clientIndustry: Public sector · Housing & urban rehabilitation
+    clientDescription: Portuguese public institute for housing and urban rehabilitation policy; manages housing investment under Portugal's Recovery and Resilience Plan (PRR).
+    project: Plataforma Gestão PRR@IHRU
+    projectDescription: PRR project management platform for Portugal's housing and urban rehabilitation institute. Engagement started under KinetIT; continued post-merger.
+    role: Architect · LowCode
+    period: May 2024 — Oct 2024
+    startDate: 2024-05
+    endDate: 2024-10
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems, REST API]
+    summary: Architected OutSystems solutions for IHRU's PRR project-management platform, aligned with business needs, platform standards, and long-term maintainability.
+    highlights:
+      - Defined OutSystems solution architecture for IHRU's PRR management platform, aligned with business needs, platform standards, and long-term strategy.
+      - Designed application structure and data model for scalability, performance, and long-term maintainability.
+      - Defined architectural governance across environments (Dev/QA/Prod) with deployment policies and CI/CD strategy.
+      - Designed integrations with external systems, APIs, and data sources ensuring reliability, traceability, and security of data flows.
+      - Promoted reuse of Core Services and shared libraries; monitored production quality/performance indicators with threshold-based corrective action plans.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: EMRP — Estrutura de Missão Recuperar Portugal
+    clientIndustry: Public sector · EU recovery programme
+    clientDescription: Portuguese government mission structure managing the Recovery and Resilience Plan (PRR) — distribution and oversight of €16+ billion in EU Next Generation funds.
+    project: SRTD / FINDUP / MYPRR — development and maintenance
+    projectDescription: OutSystems architecture for Portugal's PRR mission unit — SRTD development plus the SRTD/FINDUP/MYPRR maintenance procurement. Engagement started under KinetIT; continued post-merger.
+    role: Architect · LowCode
+    period: Mar 2024 — Oct 2024
+    startDate: 2024-03
+    endDate: 2024-10
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems, REST API]
+    summary: Architected OutSystems solutions across two EMRP contracts — SRTD development (2024-2025) and the SRTD/FINDUP/MYPRR maintenance procurement — supporting Portugal's PRR programme management.
+    highlights:
+      - Architected OutSystems solutions for EMRP across two parallel contracts — SRTD development (2024-2025) and the SRTD/FINDUP/MYPRR maintenance procurement (AQ/EMRP/2/2025).
+      - Designed scalable application structure and data models; ran technical audits identifying performance, scalability, security, and technical-debt issues.
+      - Validated architecture/design decisions from delivery teams against OutSystems best practices (Architecture Canvas) and EMRP internal standards.
+      - Defined architectural governance across environments (Dev/QA/Prod) with deployment policies and CI/CD strategy.
+      - Designed integration mechanisms with external systems and APIs, applicational security patterns, and Core Services / shared libraries for reuse.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    role: OutSystems Success Manager · Practice leadership & enablement
+    period: Feb 2022 — Jul 2024
+    startDate: 2022-02
+    endDate: 2024-07
+    location: Lisbon, Portugal
+    variants: [full]
+    summary: Ran KinetIT's OutSystems practice in parallel with named client engagements — the always-on work of keeping a delivery team productive, current, and growing.
+    highlights:
+      - Helped drive the KinetIT OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge during this tenure.
+      - Built and maintained the OutSystems Knowledge Base — patterns, code samples, reference docs — used by every active delivery team to cut ramp-up time and standardise approaches across projects.
+      - Ran the certification track for OutSystems developers — coached the team through Reactive Developer, Tech Lead, Architecture Specialist (O11 and ODC) pathways.
+      - Owned architectural reviews, technical estimations, and POCs across the practice; the technical voice for inbound opportunities (pre-sales scoping, scoping documents, proposal defence).
+      - Embedded as a floating technical advisor on active client engagements between formal allocations — unblocking delivery teams on architecture, integrations, performance, and complex business rules.
+      - Kept the practice current on platform evolution (OutSystems 11 → ODC migration paths, Reactive Web patterns, Forge component review) and represented the team in OutSystems community/Champion forums.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: Volkswagen Group (Germany)
+    clientIndustry: Automotive · OEM
+    clientDescription: One of the world's largest automotive groups — parent of Volkswagen, Audi, Porsche, SEAT, Škoda, Lamborghini, and Bentley, producing 9M+ vehicles per year.
+    project: ADMS — Wind Tunnel Test Management
+    projectDescription: Solution for configuration, execution, and analysis of aerodynamic wind-tunnel tests across Volkswagen Group brands — VW, Audi, Porsche, SEAT, Škoda, Lamborghini, Bentley.
+    role: Architect
+    period: Jan 2023 — Sep 2023
+    startDate: 2023-01
+    endDate: 2023-09
+    location: Lisbon, Portugal · client in Germany
+    variants: [site, full]
+    technologies: [OutSystems 11, REST API]
+    summary: Architected an OutSystems platform for managing and analyzing wind-tunnel aerodynamic tests across Volkswagen Group brands, including real-time telemetry ingestion from SCADA and data-logger systems.
+    highlights:
+      - Designed an OutSystems-based solution for managing and analyzing wind-tunnel aerodynamic tests for Volkswagen Group brands — VW, Audi, Porsche, SEAT, Škoda, Lamborghini, Bentley.
+      - Architected the data model and application structure for multi-brand configurations (brand, model, component type) with telemetry processing at scale.
+      - Designed the test-configuration module with flexible parametrization of aerodynamic variables (wind speed, attack angle, temperature, pressure, drag and lift coefficients).
+      - Architected real-time data ingestion from wind-tunnel acquisition systems (sensors, data loggers, SCADA) and the analysis layer with interactive dashboards comparing results across versions and brands.
+      - Defined role-based access (test engineer, tunnel manager, data analyst, brand lead) and IP/sensitive-data protection across the group; supervised delivery teams and validated scalability for new tunnels, brands, and test types.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    role: Delivery Manager · Practice & team leadership
+    period: Jun 2019 — Feb 2022
+    startDate: 2019-06
+    endDate: 2022-02
+    location: Lisbon, Portugal
+    variants: [full]
+    summary: Day-to-day leadership of OutSystems delivery teams in parallel with named client engagements — people management, allocation, technical guidance, and partner coordination across all active projects.
+    highlights:
+      - Ran OutSystems delivery teams day-to-day — technical lead and people manager combined; owned staffing, allocation, and capacity decisions across the practice.
+      - Provided technical leadership across all active engagements — architecture reviews, integration unblocking, code reviews, and performance/quality interventions whenever a delivery team hit a wall.
+      - Mentored and coached engineers through OutSystems certifications (Associate → Professional → Expert → Architecture Specialist tracks) and into senior roles inside the org.
+      - Coordinated with partner consultancies (Do iT Lean) and client-side teams on cross-firm engagements; supported pre-sales architecture conversations and proposal defence.
+      - Owned estimation, scoping, and technical risk assessment for inbound opportunities; delivered POCs and technical proposals end-to-end.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: NOS
+    clientIndustry: Telecommunications · Entertainment
+    clientDescription: Portugal's largest cable, internet, and mobile operator (Euronext-listed); also operates the country's leading cinema chain under the Cinemas NOS brand.
+    project: App Web — Cinemas NOS
+    projectDescription: Web app for ticket purchase and concession-product sales for NOS cinemas, with end-to-end booking flow, payment-gateway integrations, and POS sync.
+    role: Tech Lead
+    period: May 2021 — Oct 2021
+    startDate: 2021-05
+    endDate: 2021-10
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems 11, REST API, Payment Gateway APIs]
+    summary: Tech-led the Cinemas NOS ticket-purchase and concession web app — end-to-end booking flow, payment gateways with PCI-DSS compliance, POS integration, and responsive WCAG-accessible UX.
+    highlights:
+      - Tech-led the Cinemas NOS ticket-purchase and product web app — defining OutSystems architecture optimized for performance, scalability, and modern UX.
+      - Designed the end-to-end ticket-purchase flow (film, session, cinema, seat, payment, digital ticket) plus the concession catalog (popcorn, drinks, menus, merchandising) with advance purchase and pickup.
+      - Integrated with NOS Cinemas core systems (room management, session programming, real-time occupancy, POS, stock) and payment gateways (MBWay, Multibanco, credit/debit, gift cards) compliant with PCI-DSS.
+      - Designed a responsive, accessible (WCAG) mobile-optimized interface with interactive in-room seat selection; built user-account features (purchase history, QR-code digital tickets, favorites, notifications).
+      - Mentored the team, ran code reviews, and worked with UX/UI, marketing, and Cinemas NOS operations for continuous improvement.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: Câmara Municipal de Lisboa (CML)
+    clientIndustry: Public sector · Local government
+    clientDescription: Lisbon City Hall — municipal government of Portugal's capital, serving ~545,000 residents and operating one of the largest public-sector IT estates in the country.
+    project: Expert consultancy — Software factory & projects
+    projectDescription: Expert OutSystems consultancy across Lisbon City Hall's software factory and projects — architecture validation, technical audits, and platform governance.
+    role: Expert · Consultant
+    period: Jan 2021 — Dec 2021
+    startDate: 2021-01
+    endDate: 2021-12
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems 11, REST API, Architecture Canvas, 4-Layer Canvas, Architecture Dashboard]
+    summary: Provided expert OutSystems consultancy across CML's software factory and projects — architecture validation, technical audits, governance, and platform-wide standards.
+    highlights:
+      - Provided expert OutSystems consultancy across Lisbon City Hall (CML)'s software factory and projects — architecture validation, technical audits, and governance.
+      - Validated application architecture against OutSystems best practices (Architecture Canvas, 4-Layer Canvas); identified performance, scalability, security, and maintainability issues across in-flight work.
+      - Produced architecture/integration recommendation reports; defined cross-project development standards, code patterns, and guidelines used CML-wide.
+      - Ran code reviews and quality analyses (Architecture Dashboard); supported the OutSystems platform roadmap and governance for CML; contributed to versioning, deployment, and environment (DEV/QA/PRD) lifecycle strategies.
+      - Facilitated training, workshops, and knowledge transfer for internal and external CML development teams.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: Câmara Municipal de Lisboa (CML)
+    clientIndustry: Public sector · Local government
+    clientDescription: Lisbon City Hall — municipal government of Portugal's capital, serving ~545,000 residents and operating one of the largest public-sector IT estates in the country.
+    project: Plataforma de Apoios para Covid
+    projectDescription: Platform for submission and management of Covid-19 relief applications, designed for high-availability operation under emergency conditions.
+    role: Tech Lead
+    period: Jan 2020 — Jun 2020
+    startDate: 2020-01
+    endDate: 2020-06
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems 11]
+    summary: Tech-led the Lisbon City Hall Covid-19 relief platform — high-availability submission, automated eligibility, triage/decision workflows, fraud detection, and real-time monitoring dashboards.
+    highlights:
+      - Tech-led an OutSystems platform for submission and management of Covid-19 relief applications at Lisbon City Hall, designed for high availability and rapid scaling under emergency conditions.
+      - Built document upload, automated eligibility-rule engine, and triage/decision workflows with auto-routing, assignment, and applicant notifications.
+      - Designed real-time monitoring dashboards (request volume, response times, approved amounts, geographic distribution) and duplicate/fraud detection with full audit trail for transparency.
+      - Ensured RGPD compliance, accessibility (WCAG), role-based access (applicant, analyst, manager, auditor); enabled rapid evolution of the platform to add new relief programs or legislative changes.
+      - Mentored the team and collaborated with UX/UI, social-action, legal, and management teams.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: Luz Saúde
+    clientIndustry: Healthcare · Private hospital group
+    clientDescription: Portugal's largest private healthcare group — operates ~15 hospitals and clinics nationwide and is part of the Fidelidade Group.
+    project: Cobrança de Faturas — Automated debt collection w/ Salesforce CRM
+    projectDescription: Platform for automated identification and management of unpaid-invoice collection processes, with bidirectional Salesforce CRM integration.
+    role: Tech Lead
+    period: Jan 2020 — Sep 2020
+    startDate: 2020-01
+    endDate: 2020-09
+    location: Lisbon, Portugal
+    variants: [site, full]
+    technologies: [OutSystems, OutSystems Async Processing, REST API, Salesforce]
+    summary: Tech-led an automated invoice-collection platform for the Luz Saúde healthcare group, with bidirectional Salesforce CRM integration, multi-channel communications, and risk-based debtor segmentation.
+    highlights:
+      - Tech-led the OutSystems platform for automated identification and management of unpaid-invoice collection processes at Luz Saúde, the major Portuguese healthcare group.
+      - Designed the configurable rule engine (deadlines, late-stage tiers, contact strategies) and the staged auto-collection workflow (friendly reminder → formal notice → pre-litigation → litigation).
+      - Architected bidirectional Salesforce CRM integration — case/task creation, client and opportunity sync, REST-API consultation — giving commercial teams real-time collection-status visibility.
+      - Built multi-channel automated communications (email/SMS/letter with stage-and-segment templates), payment-agreement management, debtor segmentation by risk/amount/history, and dashboards (debt aging, recovery rate, contact-channel efficacy).
+      - Ensured RGPD compliance for personal/financial data, role-based access (collection manager, finance analyst, commercial, admin), audit trail for legal/compliance, and reporting for regulators.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    client: Luz Saúde
+    clientIndustry: Healthcare · Private hospital group
+    clientDescription: Portugal's largest private healthcare group — operates ~15 hospitals and clinics nationwide and is part of the Fidelidade Group.
+    project: Plataforma de Atendimento — Patient queue and ticketing
+    projectDescription: Ticketing and queue-management platform for Luz Saúde hospitals and clinics, with HIS/EHR integration, remote pre-booking, and real-time notifications.
+    role: Tech Lead
+    period: Sep 2019 — Dec 2019
+    startDate: 2019-09
+    endDate: 2019-12
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems 11, Firebase]
+    summary: Tech-led an OutSystems patient-queue platform for Luz Saúde hospitals and clinics — HIS/EHR integration, remote pre-booking, peripheral hardware integration, and offline-capable operation.
+    highlights:
+      - Tech-led an OutSystems-based ticketing and patient-queue platform for Luz Saúde hospitals and clinics — high-availability, scalable, resilient for high-volume hospital environments.
+      - Built the ticket-emission system with service-type differentiation, real-time queue management with clinical-priority and urgency rules, and digital call panels with audio/visual alerts in waiting rooms.
+      - Integrated with hospital information systems (HIS, EHR) to associate tickets with clinical records; added remote pre-booking via mobile/web with real-time approach notifications (SMS, push).
+      - Designed offline-capable operation, multi-auth (citizen card, SNS user number, QR code), WCAG accessibility, and configurable counter/service rules per healthcare unit.
+      - Mentored the team, integrated with peripherals (ticket dispensers, thermal printers, call screens), and collaborated with clinical/administrative staff for requirements alignment.
+
+  - company: KinetIT
+    companyUrl: https://www.kinetit.com/
+    via: Do iT Lean (now Valantic)
+    client: Via Direta (Fidelidade)
+    brand: Fidelidade
+    clientIndustry: Insurance · Direct sales channel
+    clientDescription: Direct-channel brand of Fidelidade, Portugal's largest insurance group — provides motor and other personal-line insurance products directly to consumers.
+    project: App Vistorias OK
+    projectDescription: Mobile vehicle-inspection app for the Fidelidade insurer (via the Via Direta brand) using on-device and cloud AI models for inspection support.
+    role: Tech Lead
+    period: Sep 2019 — Apr 2020
+    startDate: 2019-09
+    endDate: 2020-04
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems 11, Mobile, JavaScript, OutSystems mobile plugins]
+    summary: Tech-led the mobile vehicle-inspection app for Via Direta (Fidelidade), with offline-first OutSystems architecture and on-device + cloud AI models supporting inspection workflows.
+    highlights:
+      - Tech-led the mobile vehicle-inspection application for Via Direta (Fidelidade) — using on-device + cloud AI models for inspection support.
+      - Designed an OutSystems architecture with offline-first operation for inspections in connectivity-limited locations, plus photo/video capture catalogued by vehicle zone (front, rear, sides, interior, chassis).
+      - Integrated with the insurer's core systems (policies, claims, customers) with sync-on-reconnect; added digital signatures from inspector and insured for inspection validation.
+      - Defined the data model for inspections, reports, and inspection history; built approval workflows for inspection validation.
+      - Ensured app security, role-based authorization (inspector, manager, backoffice), data encryption; mentored the team, ran code reviews, real-device testing (iOS/Android), and DEV/QA/PRD deployment.
+
+  - company: Outfit (now Devoteam)
+    via: KPMG
+    client: EuroBic (now ABANCA Portugal)
+    clientIndustry: Banking · Retail & commercial
+    clientDescription: Portuguese retail and commercial bank (acquired by ABANCA in 2024) — served personal, business, and corporate customers across Portugal.
+    project: Frontoffice presencial — Branch front-office banking solution
+    projectDescription: Offline-capable branch front-office banking solution for in-branch product sales and process management, built on OutSystems.
+    role: Tech Lead
+    period: Oct 2018 — May 2019
+    startDate: 2018-10
+    endDate: 2019-05
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems 11, API]
+    summary: Tech-led the team building an offline-capable branch front-office banking solution for EuroBic, on the OutSystems platform — product sales, process management, and offline-first UX.
+    highlights:
+      - Tech-led the team developing an offline-capable branch front-office banking solution for EuroBic — supporting in-branch product sales and process management on the OutSystems platform.
+      - Defined application architecture for scalability and performance; ran code reviews and enforced OutSystems development standards (Architecture Canvas, 4-Layer Canvas).
+      - Mentored developers, translated business requirements into technical solutions, planned estimates and deliveries with the project manager.
+      - Owned external-system integrations (APIs, databases, third-party services); identified and mitigated technical risks across the project lifecycle.
+      - Promoted component/module reuse and best practices around security, performance, and data management; participated in DEV/QA/PRD deployment management.
+
+  - company: Outfit (now Devoteam)
+    client: Bold
+    clientIndustry: HR Tech · Recruitment
+    clientDescription: Recruitment management product targeting agencies and corporate hiring teams — built from scratch within Outfit's consulting product portfolio.
+    project: Gestor de recrutamento — Recruitment management product
+    projectDescription: From-scratch recruitment management product for the Bold brand (consulting product), built on OutSystems.
+    role: Tech Lead
+    period: Mar 2018 — Sep 2018
+    startDate: 2018-03
+    endDate: 2018-09
+    location: Lisbon, Portugal
+    variants: [full]
+    technologies: [OutSystems, JavaScript]
+    summary: Tech-led a from-scratch OutSystems recruitment management product for Bold — full product build with architecture, integrations, and team leadership.
+    highlights:
+      - Tech-led a from-scratch recruitment management product for Bold, built on OutSystems.
+      - Defined the application architecture for scalability and performance; ran code reviews and enforced OutSystems development standards (Architecture Canvas, 4-Layer Canvas).
+      - Mentored developers, translated business requirements into technical solutions, and owned estimation and delivery planning.
+      - Owned external-system integrations (APIs, databases, third-party services); promoted component reuse and identified/mitigated technical risks.
+      - Implemented security/performance/data-management practices; managed DEV/QA/PRD deployments and ran cross-functional collaboration with UX/UI, QA, DevOps, and business.
+
+  # ---- Student-era & community (LinkedIn-only — full variant) ----
+
+  - company: SystemsGroup — Junior Enterprise
+    role: Chief Executive Officer
+    period: Sep 2013 — Aug 2014
+    startDate: 2013-09
+    endDate: 2014-08
+    location: TagusPark, Oeiras
+    variants: [full]
+    summary: Led the IST student-run Junior Enterprise, ~35 people across 4 departments.
+    highlights:
+      - Planned and supervised strategic objectives; implemented systems and processes to monitor and report against agreed KPIs.
+      - Provided strong leadership to all 4 departments (~35 people). Implemented incentive systems that recognized strong performance.
+
+  - company: SystemsGroup — Junior Enterprise
+    role: Executive Assistant to CTO
+    period: Mar 2013 — Aug 2013
+    startDate: 2013-03
+    endDate: 2013-08
+    location: TagusPark, Oeiras
+    variants: [full]
+    summary: Supported the CTO on technical operations and cross-team coordination.
+    highlights: []
+
+  - company: SystemsGroup — Junior Enterprise
+    role: Software Developer
+    period: Jul 2012 — Jun 2013
+    startDate: 2012-07
+    endDate: 2013-06
+    location: TagusPark, Oeiras
+    variants: [full]
+    summary: Built software solutions for IST Junior Enterprise client projects.
+    highlights: []
+
+  - company: Núcleo de Apoio ao Estudante do IST (Taguspark)
+    role: Mentor
+    period: Jul 2013 — Jul 2014
+    startDate: 2013-07
+    endDate: 2014-07
+    location: Porto Salvo, Oeiras
+    variants: [full]
+    summary: Newly-enrolled Students Orientation and Mentoring Program.
+    highlights: []
+
+  - company: LAGE2 — Laboratório de Apoio à Gestão de Actividades Extracurriculares
+    role: Operations and Events Coordinator
+    period: Mar 2014 — Jun 2014
+    startDate: 2014-03
+    endDate: 2014-06
+    location: TagusPark, Porto Salvo
+    variants: [full]
+    summary: Coordinated operations teams across external relations, marketing, and logistics.
+    highlights: []
+
+  - company: LAGE2 — Laboratório de Apoio à Gestão de Actividades Extracurriculares
+    role: Technological and Business Week Coordinator
+    period: Sep 2013 — Apr 2014
+    startDate: 2013-09
+    endDate: 2014-04
+    location: TagusPark, Oeiras
+    variants: [full]
+    summary: Coordinated a 25-person staff for an IST-organized industry event in Oeiras.
+    highlights:
+      - Coordinated an event organized by Instituto Superior Técnico (IST), TULisbon, Oeiras.
+      - Engaged and persuaded enterprises to be present at the event.
+      - Planned, managed, and supervised 25 staff members.
+
+  - company: LAGE2 — Laboratório de Apoio à Gestão de Actividades Extracurriculares
+    role: Entrepreneur's Group Member
+    period: Feb 2013 — Mar 2014
+    startDate: 2013-02
+    endDate: 2014-03
+    location: IST — TagusPark, Oeiras
+    variants: [full]
+    summary: Member of the entrepreneurship group at LAGE2 (IST).
+    highlights: []
+
+  - company: Code4PT
+    role: Software Developer
+    period: Apr 2013 — Aug 2013
+    startDate: 2013-04
+    endDate: 2013-08
+    variants: [full]
+    summary: Volunteer software developer building free technology solutions for societal problems and publishing them publicly.
+    highlights: []
+
+  - company: Energia de Portugal 2013
+    role: Participant
+    period: Apr 2013 — Jul 2013
+    startDate: 2013-04
+    endDate: 2013-07
+    variants: [full]
+    summary: Participant in an entrepreneurship event with the DCID project.
+    highlights: []
+
+  - company: SINFO — Semana Informática do IST
+    role: Marketing
+    period: Mar 2012 — Mar 2013
+    startDate: 2012-03
+    endDate: 2013-03
+    location: Lisboa
+    variants: [full]
+    summary: Marketing team for the IST Informatics Week — Portugal's largest student-organized tech event.
+    highlights: []
+
+  - company: INESC-ID — Visualization and Intelligent Multimodal Interfaces
+    role: Summer Internship Student
+    period: Jul 2012 — Sep 2012
+    startDate: 2012-07
+    endDate: 2012-09
+    location: Lisboa
+    variants: [full]
+    summary: Development of a Serious Game to teach Chemistry.
+    highlights: []
+
+# ──────────────────────────────────────────────────
+# Skills
+# ──────────────────────────────────────────────────
+skillGroups:
+  - title: Platform & Architecture
+    skills:
+      - OutSystems (Reactive, Mobile, ODC)
+      - Software Solution Architecture
+      - System Design
+      - API Design
+      - Performance & Scalability
+      - Technical Audits
+  - title: Engineering
+    skills:
+      - .NET
+      - C#
+      - SQL Server
+      - JavaScript / TypeScript
+      - GitHub Actions
+      - CI/CD
+  - title: Leadership & Delivery
+    skills:
+      - Delivery Management
+      - Agile (Scrum, Kanban)
+      - Estimation & Scoping
+      - Stakeholder Management
+      - Mentoring & Coaching
+      - Digital Transformation
+      - Community Building
+
+# Flat list of expertise topics — used by Schema.org `knowsAbout`
+knowsAbout:
+  - OutSystems
+  - OutSystems Developer Cloud
+  - OutSystems 11
+  - Low-Code Development
+  - Solutions Architecture
+  - Software Solution Architecture
+  - Solution Design
+  - System Design
+  - Enterprise Application Development
+  - Microservices Architecture
+  - API Gateway (ApiSix)
+  - Technical Leadership
+  - Delivery Management
+  - Agile Software Development
+  - API Design
+  - CI/CD
+  - GitHub Actions
+  - Jenkins
+  - ArgoCD
+  - .NET
+  - .NET Core
+  - C#
+  - SQL Server
+  - JavaScript
+  - TypeScript
+  - React
+  - Next.js
+  - Salesforce CRM Integration
+  - Agentic Systems Engineering
+  - AI-assisted Development (Claude AI, ChatGPT)
+  - Mentoring
+  - Digital Transformation
+  - Stakeholder Management
+  - Generative AI in Software Development (Claude AI, ChatGPT)
+
+# ──────────────────────────────────────────────────
+# Credentials
+# ──────────────────────────────────────────────────
+certifications:
+  - { name: Associate Developer,                  platform: ODC, date: "Feb 2023", isoDate: 2023-02-02 }
+  - { name: Associate Developer,                  platform: O11, date: "Aug 2022", isoDate: 2022-08-03 }
+  - { name: Expert Traditional Web Developer,     platform: O11, date: "Jan 2021", isoDate: 2021-01-16, highlight: true }
+  - { name: Tech Lead,                            platform: O11, date: "Apr 2020", isoDate: 2020-04-29, highlight: true }
+  - { name: Professional Traditional Web Developer, platform: O11, date: "Apr 2020", isoDate: 2020-04-04 }
+  - { name: Associate Traditional Web Developer,  platform: O11, date: "Oct 2019", isoDate: 2019-10-27 }
+
+specializations:
+  - { name: Architecture Specialist, platform: ODC, date: "Oct 2024", isoDate: 2024-10-31, highlight: true }
+  - { name: Architecture Specialist, platform: O11, date: "Aug 2022", isoDate: 2022-08-25, highlight: true }
+
+commercialCredentials:
+  - { name: OutSystems Associate Sales }
+  - { name: OutSystems Associate Pre-Sales }
+
+# ──────────────────────────────────────────────────
+# Honors
+# ──────────────────────────────────────────────────
+honors:
+  - name: OutSystems Champion
+    since: "2022"
+    sinceIso: 2022-01-01
+    issuer: OutSystems
+    url: https://www.outsystems.com/community/advocacy-programs/champions/?load=False
+    description: A select community recognition awarded to a small number of OutSystems experts worldwide for technical excellence and community contribution. Sustained since 2022 — backed by 50+ assets published on the OutSystems Forge.
+
+# ──────────────────────────────────────────────────
+# Publications
+# ──────────────────────────────────────────────────
+publications:
+  - title: Why you should add UUIDs to your database entities
+    description: A practical case for surrogate UUIDs over auto-increment integers in enterprise OutSystems data models — and how to do it without paying the storage tax.
+    url: https://medium.com/kinetit/why-you-should-add-uuids-to-your-database-entities-9d095117fcb1
+    publisher: KinetIT on Medium
+  - title: "Automating ODC External Logic Deployments: Smart Versioning and Splitting Workflows in GitHub Actions"
+    description: How to ship OutSystems Developer Cloud external logic with intelligent versioning, fewer broken builds, and workflows that actually scale across teams.
+    url: https://itnext.io/automating-odc-external-logic-deployments-smart-versioning-and-splitting-workflows-in-github-5a9e859d3160
+    publisher: ITNEXT
+
+# ──────────────────────────────────────────────────
+# Talks — community speaking & meetups
+# ──────────────────────────────────────────────────
+talks:
+  - title: "Lisbon Meetup: OutSystems Agentic Systems Engineering"
+    venue: Babel
+    partnership: In partnership with OutSystems
+    location: Torres de Lisboa, Portugal
+    date: 2026-05-21
+    coSpeaker: Orlando Ramos · Product Manager, OutSystems
+    description: A community session on AI-assisted development with OutSystems — new approaches, a hands-on component, and exchange of experiences with the Lisbon OutSystems community.
+    url: https://lnkd.in/eCKNPCAE
+    variants: [site, full]
+
+# ──────────────────────────────────────────────────
+# Recommendations — LinkedIn endorsements
+# ──────────────────────────────────────────────────
+# Each entry can be tagged with variants:[site, full] for the
+# strongest / most curated ones, or just [full] for the rest.
+recommendations:
+  # ---- Curated [site, full] — 5 strongest, diverse perspectives ----
+
+  - name: Paulo Ribeiro
+    role: Senior Technical Writer
+    company: OutSystems
+    relationship: Managed António directly
+    date: 2016-11
+    variants: [site, full]
+    text: |
+      António is a very proactive and responsible professional. He has incredible people skills that he continually leverages to contribute to the success of his team.
+
+      I had the pleasure of leading António in the role of technical writer for over eight months and was constantly appeased with António's autonomy and critical thinking in delving into the increasingly complex tasks that he tackled over this time.
+
+      António left no stone unturned while researching and investigating new subjects. He used a rather systematic approach that involved liaising with the development teams, studying how the competitors tackled similar problems, and always rolling up his sleeves to try things for himself.
+
+      This meant that António would build very solid and clear mental models of the subjects at hand, no matter how complex. Very often, António would detect bugs, small loopholes, or even usability weaknesses in the software, that he tirelessly reported back to the development teams.
+
+      These traits of António made him an excellent technical writer, especially when producing technical content for a very sophisticated product in a fast-paced company such as OutSystems.
+
+      Besides these technical capabilities, António also has very strategic and long-term thinking that helped me guide a rather new team through uncharted territory. Along these past months, I relied on António to provide some historical context and to suggest pragmatic solutions to the impromptu challenges that the team faced.
+
+      Last but not least, António's remarkable collaboration skills were vital in helping ramp-up new team members and ensuring that the goals of the team were successfully attained.
+
+      Besides being an invaluable asset, António is also a fun and inspiring colleague that any team would be lucky to have.
+
+  - name: Francisco Ferreira
+    role: OutSystems Senior Developer
+    company: Edge Portugal
+    relationship: Reported to António directly
+    date: 2019-04
+    variants: [site, full]
+    text: |
+      It's rare to encounter a talent like António, a person any Dev can count in to manage and help the resolution of problems in the project where I had the pleasure of working alongside him. We worked together close to 8 months in a challenging project with changing deadlines, objectives and a difficult client with preconceived ideas about how a functionality should be done.
+
+      I was particularly impressed with António's ability to adapt to the management of an ever-changing project, both in terms of deadlines and tasks and sometimes objectives. I think this is a very important capacity for a good project development since all projects have their problems at some point in time.
+
+      António earns by this and other reasons my recommendation as an important member of any development team.
+
+  - name: João Baptista
+    role: IT Consultancy
+    company: Energy and Environment Engineering
+    relationship: Worked with António on the same team
+    date: 2024-01
+    variants: [site, full]
+    text: |
+      I have worked with António and he is, with no doubts, someone that I can highly recommend to work with.
+
+      He has an enormous experience on working with OutSystems platform, once he has a very big know-how on topics, for example, to app architecture, UX/UI, performance, security, delivery, coding best practices and dealed with several projects on different client areas.
+
+      António is used to deal with complex business logic and is very efficient to provide solutions for problems and requirements.
+
+      António has demonstrated to have very high responsibilities and commitment to his duties on his day-by-day, also great capabilities to lead teams, to distribute tasks, to take decisions, to avoid potential problems, to comply deadlines and to motivate his colleagues to grow up on soft skills and hard skills and is always available to help to them for everything they need.
+
+      It was big pleasure to work with António, and I am so grateful to him, once he helped me a lot on my OutSystems journey. Every time I needed, he was able to provide support and passed to me many knowledge bases, hints and tips.
+
+  - name: Dora Ribeiro
+    role: Senior Technical Writer
+    company: OutSystems (now at European Commission — DG for Digital Services)
+    relationship: Worked with António on the same team
+    date: 2017-01
+    variants: [site, full]
+    text: |
+      António is not what most people think a typical developer is. He's a natural-born networker and communicates with ease. These are great skills when your job entails eliciting information from people and learn new product features and deep insights into their contexts.
+
+      Contrary to many engineers he's good at bringing the whole picture into view and never forgets the product's real users might have different needs than the people sitting at R&D.
+
+      I think he would be a great asset in a Developer Experience or Relations team or as a Technology Evangelist because of his user focus, social skills and good understanding of the web and mobile development ecosystems, but I'm sure he will be successful in whatever he sets out to do.
+
+  - name: João Fernandes
+    role: OutSystems Academy team
+    company: OutSystems (now Products at C3 AI)
+    relationship: Worked with António on the same team — helped onboard him into the OutSystems Academy team
+    date: 2015-08
+    variants: [site, full]
+    text: |
+      I helped onboard António into the OutSystems Academy team, and had weekly one-on-ones with him. I worked with him for more than six months.
+
+      António has a good technical background. He isn't comfortable documenting something without testing it first. Due to this, he frequently finds bugs in the product that can be fixed before shipping the product to customers.
+
+      He also finds ways to improve the UX of the product, helping create a product that is simple to use.
+
+      António is also focused on bringing consistency to the documentation. He has created styleguides and worked hard to make the team understand their importance and contribute to his efforts.
+
+      António knows how to get his point across either in person or asynchronously (email, IM, ...). He always tries to gather the maximum context available and other points of view, to make informed decisions.
+
+      One thing I really like about António, is that he's constantly researching the state of the art, and how other companies are solving a problem our team is trying to solve. This allows the team to make informed decisions, and avoid mistakes others made before.
+
+      If given the opportunity I would really enjoy working with António again!
+
+  # ---- [full] only ----
+
+  - name: Rodrigo Francisco
+    role: IT Business Partner
+    company: Santander
+    relationship: Worked with António on the same team
+    date: 2020-04
+    variants: [full]
+    text: |
+      António has a huge potential and is one of the best colleagues I have had the pleasure of working with. He is very productive, organized, a perfectionist with critical thinking and goal-minded.
+
+  - name: Hugo Firmo
+    role: PhD Candidate
+    company: BI Norwegian Business School · Visiting Researcher at Stanford University (SCANCOR)
+    relationship: Worked with António on the SystemsGroup Junior Enterprise board
+    date: 2014-04
+    variants: [full]
+    text: |
+      I met António right before we became part of the board of SystemsGroup Junior Enterprise in 2013. I immediately recognized his strong interpersonal skills and spirit of leadership.
+
+      António has a solid background in IT and is able to effectively communicate with everyone in a company. In the most difficult times, he was able to transmit serenity, a positive attitude, and confidence to the rest of the board and employees.
+
+      Simultaneously being the CEO of a Junior Enterprise and a Master's student is not a job for just anyone. Because of his outstanding organization skills and positive outlook on life, he was able to coordinate all his projects and successfully conclude them.
+
+      I believe António will bring added value to any company, so I highly recommend him for any leadership position.
+
+# ──────────────────────────────────────────────────
+# Education
+# ──────────────────────────────────────────────────
+education:
+  - school: Instituto Superior Técnico
+    schoolUrl: https://tecnico.ulisboa.pt/
+    degree: Master's in Information Systems and Computer Engineering
+    studyType: Master of Science
+    area: Information Systems and Computer Engineering
+    period: 2012 — 2014
+    startDate: 2012-09
+    endDate: 2014-10
+    detail: Major in Multimedia Systems, Minor in Enterprise Information Systems. Grant holder at DEI.
+
+  - school: Instituto Superior Técnico
+    schoolUrl: https://tecnico.ulisboa.pt/
+    degree: Bachelor's in Computer and Information Sciences
+    studyType: Bachelor of Science
+    area: Computer and Information Sciences
+    period: 2007 — 2012
+    startDate: 2007-09
+    endDate: 2012-09
+    detail: ""
+
+  - school: Escola Secundária da Amadora
+    degree: High School graduation
+    studyType: High School
+    area: Science and Technology
+    period: 2004 — 2007
+    startDate: 2004-09
+    endDate: 2007-06
+    detail: ""
+    variants: [full]
+
+# ──────────────────────────────────────────────────
+# Languages
+# ──────────────────────────────────────────────────
+languages:
+  - { name: Portuguese, level: Native,                cefr: C2, code: pt }
+  - { name: English,    level: Professional working,  cefr: C1, code: en }
+  - { name: Spanish,    level: Elementary,            cefr: A2, code: es }
+  - { name: French,     level: Elementary,            cefr: A2, code: fr }
+
+# ──────────────────────────────────────────────────
+# Principles — how I think about software
+# ──────────────────────────────────────────────────
+principles:
+  - title: Define the problem precisely
+    body: Most shipped bugs are accurate answers to the wrong question. Spend the time upstream.
+  - title: Optimize for the next maintainer
+    body: "Including future-me. Clarity, taxonomy, and consistency aren't aesthetics — they compound."
+  - title: Architecture is a team sport
+    body: "The best design loses if the team can't operate it. Mentor, document, and decide in the open."
+
+# ──────────────────────────────────────────────────
+# FAQ — recruiter / hiring-manager / AI-agent facing
+# ──────────────────────────────────────────────────
+faq:
+  - q: What is António currently doing?
+    a: António is OutSystems Architect at Babel Group in Lisbon, Portugal (since June 2024). He designs and audits OutSystems enterprise solutions, provides architectural guidance, and mentors delivery teams.
+
+  - q: Is António open to new opportunities?
+    a: Yes. António is open to senior OutSystems architect, principal engineer, and engineering leadership roles. He is open to remote work across the EU and UK, and to relocation for the right opportunity.
+
+  - q: How can a recruiter or hiring manager contact António?
+    a: Email antonio.pereira.professional@outlook.com or message via LinkedIn at https://www.linkedin.com/in/antonioppereira/. He typically responds within 24 hours.
+
+  - q: What is an OutSystems Champion?
+    a: OutSystems Champion is a select community recognition awarded by OutSystems to a small number of experts worldwide for sustained technical excellence and community contribution. António has held the title since 2022 and has published 50+ assets on the OutSystems Forge.
+
+  - q: What OutSystems credentials does António hold?
+    a: "Ten active OutSystems credentials: 6 certifications (Associate Developer ODC, Associate Developer O11, Expert Traditional Web Developer O11, Tech Lead O11, Professional Traditional Web Developer O11, Associate Traditional Web Developer O11), 2 specializations (Architecture Specialist ODC, Architecture Specialist O11), and 2 commercial credentials (Associate Sales, Associate Pre-Sales). All verifiable at https://www.outsystems.com/profile/olcy67xggw/."
+
+  - q: How many years of experience does António have?
+    a: Over 10 years in software engineering. His career started in 2014 at OutSystems R&D as a Knowledge Engineer, then Software Engineer on the Service Studio team. He moved into delivery leadership in 2018 and into architecture in 2024.
+
+  - q: What technologies does António specialize in?
+    a: "Primary: OutSystems Developer Cloud (ODC) and OutSystems 11. Adjacent: .NET, C#, SQL Server, JavaScript / TypeScript, GitHub Actions, CI/CD. Practice: software architecture, system design, API design, performance and scalability, delivery management, agile, mentoring."
+
+  - q: What is António's educational background?
+    a: Master's in Information Systems and Computer Engineering (2014) and Bachelor's in Computer and Information Sciences (2012), both from Instituto Superior Técnico, University of Lisbon.
+
+  - q: What languages does António speak?
+    a: Portuguese (native, C2), English (professional working, C1), Spanish (elementary, A2), and French (elementary, A2).
+
+  - q: Has António worked at OutSystems directly?
+    a: Yes. António spent 3 years 7 months at OutSystems (2014–2018) — first as a Knowledge Engineer, then as a Software Engineer on the Service Studio team in R&D, building the IDE used by every OutSystems developer.

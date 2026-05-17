@@ -14,6 +14,9 @@ import {
   languages,
   principles,
   faq,
+  talks,
+  recommendations,
+  selectedClients,
 } from '~/data/profile';
 
 // llms-full.txt — full plain-text/markdown dump of the CV.
@@ -78,12 +81,29 @@ export const GET: APIRoute = () => {
   }
   lines.push('');
 
+  lines.push('## Selected clients (by industry)');
+  lines.push('');
+  for (const g of selectedClients) {
+    lines.push(`- **${g.industry}** — ${g.brands.join(' · ')}`);
+  }
+  lines.push('');
+
   lines.push('## Experience');
   lines.push('');
   for (const e of experience) {
-    lines.push(`### ${e.role} — ${e.company}`);
-    lines.push(`*${e.period} · ${e.location}${e.current ? ' · Current' : ''}*`);
+    const header = e.client ? `${e.role} · ${e.company} · ${e.client}` : `${e.role} — ${e.company}`;
+    lines.push(`### ${header}`);
+    lines.push(`*${e.period}${e.location ? ` · ${e.location}` : ''}${e.current ? ' · Current' : ''}*`);
     if (e.companyUrl) lines.push(`Company: ${e.companyUrl}`);
+    if (e.via) lines.push(`Via: ${e.via}`);
+    if (e.clientIndustry) lines.push(`Client industry: ${e.clientIndustry}`);
+    if (e.clientDescription) lines.push(`Client: ${e.clientDescription}`);
+    if (e.project) lines.push(`Project: ${e.project}`);
+    if (e.projectDescription) lines.push(`Project description: ${e.projectDescription}`);
+    if (e.technologies && e.technologies.length > 0) {
+      lines.push(`Technologies: ${e.technologies.join(', ')}`);
+    }
+    if (e.liveUrl) lines.push(`Live result: ${e.liveUrl}`);
     lines.push('');
     lines.push(e.summary);
     lines.push('');
@@ -155,6 +175,51 @@ export const GET: APIRoute = () => {
     lines.push('');
     lines.push(p.description);
     lines.push('');
+  }
+
+  lines.push('## Talks & speaking');
+  lines.push('');
+  if (talks.length === 0) {
+    lines.push('_None yet._');
+    lines.push('');
+  } else {
+    for (const t of talks) {
+      const dateLabel = new Date(t.date).toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      lines.push(`### ${t.title}`);
+      lines.push(`*${dateLabel}${t.venue ? ` · ${t.venue}` : ''}${t.partnership ? ` · ${t.partnership}` : ''}${t.location ? ` · ${t.location}` : ''}*`);
+      if (t.coSpeaker) lines.push(`Co-speaker: ${t.coSpeaker}`);
+      if (t.url) lines.push(`Link: ${t.url}`);
+      if (t.description) {
+        lines.push('');
+        lines.push(t.description);
+      }
+      lines.push('');
+    }
+  }
+
+  lines.push('## Recommendations');
+  lines.push('');
+  if (recommendations.length === 0) {
+    lines.push('_None on file._');
+    lines.push('');
+  } else {
+    lines.push(`${recommendations.length} LinkedIn recommendations on file.`);
+    lines.push('');
+    for (const r of recommendations) {
+      const dateLabel = r.date
+        ? new Date(r.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' })
+        : null;
+      const header = [r.name, r.role && r.company ? `${r.role} at ${r.company}` : r.role || r.company]
+        .filter(Boolean)
+        .join(' — ');
+      lines.push(`### ${header}`);
+      if (r.relationship || dateLabel) {
+        lines.push(`*${[r.relationship, dateLabel].filter(Boolean).join(' · ')}*`);
+      }
+      lines.push('');
+      lines.push(r.text.trim());
+      lines.push('');
+    }
   }
 
   lines.push('## FAQ');

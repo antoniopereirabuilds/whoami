@@ -13,6 +13,9 @@ import {
   knowsAbout,
   languages,
   faq,
+  talks,
+  recommendations,
+  selectedClients,
 } from '~/data/profile';
 
 export interface Props {
@@ -52,6 +55,57 @@ const allCredentials = [
   ...certifications.map((c) => ({ ...c, credentialCategory: 'Certification' as const })),
   ...specializations.map((c) => ({ ...c, credentialCategory: 'Specialization' as const })),
 ];
+
+// Talks as Event entities — picked up by Google for event-rich-results
+const eventEntities = talks.map((t, idx) => ({
+  '@type': 'Event',
+  '@id': `${canonical}#talk-${idx + 1}`,
+  name: t.title,
+  startDate: t.date,
+  endDate: t.date,
+  eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+  eventStatus: 'https://schema.org/EventScheduled',
+  location: {
+    '@type': 'Place',
+    name: t.venue,
+    address: t.location,
+  },
+  organizer: t.partnership
+    ? { '@type': 'Organization', name: `${t.venue} · ${t.partnership}` }
+    : { '@type': 'Organization', name: t.venue },
+  performer: [
+    { '@id': personId },
+    ...(t.coSpeaker ? [{ '@type': 'Person', name: t.coSpeaker }] : []),
+  ],
+  description: t.description,
+  url: t.url,
+}));
+
+// Recommendations as Review entities — trust/credibility signal for the Person
+const reviewEntities = recommendations.map((r, idx) => ({
+  '@type': 'Review',
+  '@id': `${canonical}#review-${idx + 1}`,
+  itemReviewed: { '@id': personId },
+  author: {
+    '@type': 'Person',
+    name: r.name,
+    jobTitle: r.role,
+    worksFor: r.company ? { '@type': 'Organization', name: r.company } : undefined,
+  },
+  reviewBody: r.text,
+  datePublished: r.date,
+}));
+
+// Selected-client Organizations — gives crawlers/agents the "who I've worked with" signal
+const clientOrgEntities = Array.from(
+  new Set(selectedClients.flatMap((g) => g.brands)),
+).map((name) => ({
+  '@type': 'Organization',
+  name,
+}));
+
+// OutSystems Champion community as a ProgramMembership the Person belongs to
+const championHonor = honors[0];
 
 const ldGraph = {
   '@context': 'https://schema.org',
@@ -105,6 +159,17 @@ const ldGraph = {
         url: e.schoolUrl,
       })),
       award: honors.map((h) => `${h.name} (since ${h.since})`),
+      memberOf: championHonor
+        ? {
+            '@type': 'ProgramMembership',
+            programName: `${championHonor.name} program`,
+            hostingOrganization: { '@type': 'Organization', name: championHonor.issuer },
+            member: { '@id': personId },
+            startDate: championHonor.sinceIso,
+            url: (championHonor as { url?: string }).url,
+          }
+        : undefined,
+      subjectOf: eventEntities.map((e) => ({ '@id': e['@id'] })),
       hasCredential: [
         ...allCredentials.map((c) => ({
           '@type': 'EducationalOccupationalCredential',
@@ -133,6 +198,12 @@ const ldGraph = {
       name: o.name,
       url: o.url,
     })),
+    // Selected client organizations — surfaces the "worked with" brands
+    ...clientOrgEntities,
+    // Events (talks)
+    ...eventEntities,
+    // Reviews (recommendations)
+    ...reviewEntities,
     // WebSite
     {
       '@type': 'WebSite',
@@ -192,7 +263,7 @@ const ldGraph = {
     <meta name="author" content={profile.name} />
     <meta
       name="keywords"
-      content="OutSystems, OutSystems Champion, OutSystems Architect, OutSystems Developer Cloud, ODC, OutSystems 11, Low-Code, Software Architect, Tech Lead, Delivery Manager, Architecture Specialist, OutSystems Forge, António Pereira, Antonio Pereira, Babel, Lisbon, Portugal"
+      content="OutSystems, OutSystems Champion, OutSystems Architect, Solutions Architect, Solution Architect, Software Solution Architecture, OutSystems Developer Cloud, ODC, OutSystems 11, Low-Code, Software Architect, Tech Lead, Delivery Manager, Architecture Specialist, OutSystems Forge, OutSystems Top Partner, .NET Core, Microservices, React, Next.js, TypeScript, API Gateway, ApiSix, Agentic Systems Engineering, AI-assisted development, Claude AI, Salesforce CRM, Public sector, Government, Automotive, Telecommunications, Healthcare, Insurance, Banking, IRN, CMVM, NOS, Volkswagen Group, Luz Saúde, Fidelidade, EuroBic, Câmara Municipal de Lisboa, IHRU, EMRP, KPMG, Babel, KinetIT, António Pereira, Antonio Pereira, Lisbon, Portugal"
     />
     <meta name="theme-color" content="#7548ff" />
     <meta name="color-scheme" content="light dark" />

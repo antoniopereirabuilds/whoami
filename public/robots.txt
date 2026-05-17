@@ -1,4 +1,4 @@
-# robots.txt for antonioppereira.github.io
+# robots.txt for antoniopereirabuilds.github.io/whoami
 # This is a personal CV site — agents and search engines are welcome.
 
 User-agent: *
@@ -83,9 +83,9 @@ Allow: /
 
 # --- Discovery hints ---
 
-Sitemap: https://antonioppereira.github.io/sitemap-index.xml
+Sitemap: https://antoniopereirabuilds.github.io/whoami/sitemap-index.xml
 
 # llms.txt (https://llmstxt.org/) — agent discovery file
-# Llms: https://antonioppereira.github.io/llms.txt
-# Llms-Full: https://antonioppereira.github.io/llms-full.txt
-# JSON Resume: https://antonioppereira.github.io/profile.json
+# Llms: https://antoniopereirabuilds.github.io/whoami/llms.txt
+# Llms-Full: https://antoniopereirabuilds.github.io/whoami/llms-full.txt
+# JSON Resume: https://antoniopereirabuilds.github.io/whoami/profile.json

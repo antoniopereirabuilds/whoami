@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { profile, site, honors } from '~/data/profile';
+import { profile, site, honors, talks, recommendations, selectedClients } from '~/data/profile';
 
 // llms.txt — proposed standard for agent discovery. See: https://llmstxt.org/
 // Minimal index file pointing agents at the highest-signal resources.
@@ -35,8 +35,36 @@ export const GET: APIRoute = () => {
 - 50+ assets published on the OutSystems Forge
 - 10 OutSystems credentials (6 certifications, 2 specializations, 2 commercial)
 - MSc in Information Systems and Computer Engineering, Instituto Superior Técnico (2014)
-- Languages: Portuguese (native), English (professional), Spanish (elementary)
+- Languages: ${['Portuguese (native, C2)', 'English (professional working, C1)', 'Spanish (elementary, A2)', 'French (elementary, A2)'].join(', ')}
 - Availability: ${profile.availability}
+
+## Recent achievements
+
+- Helped position Babel as a Top OutSystems Partner Worldwide and #1 OutSystems Partner in Portugal
+- Helped drive KinetIT's OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge
+- Solution Architect and Team Leader on a nationally-critical Portuguese government program at IRN (10-person team within a 70+ person program; re-platformed OutSystems to .NET Core / microservices / Next.js / React)
+
+## Selected clients (by industry)
+
+${selectedClients.map((g) => `- ${g.industry}: ${g.brands.join(', ')}`).join('\n')}
+
+## Speaking
+
+${
+  talks.length === 0
+    ? '_None yet._'
+    : talks
+        .map((t) => {
+          const dateLabel = new Date(t.date).toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+          const speakerLine = t.coSpeaker ? ` (with ${t.coSpeaker})` : '';
+          return `- **${t.title}** — ${dateLabel}, ${t.venue}${t.partnership ? `, ${t.partnership}` : ''}${speakerLine}${t.url ? `. ${t.url}` : ''}`;
+        })
+        .join('\n')
+}
+
+## Endorsements summary
+
+${recommendations.length} LinkedIn recommendations on file. Curated set visible at ${site.url}/#endorsements covering manager, direct-report, and peer perspectives across the OutSystems R&D, KinetIT delivery, and Outfit consulting tenures.
 
 ## How to cite
 
