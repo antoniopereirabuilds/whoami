@@ -59,11 +59,13 @@ profile:
   # Summary — per-variant override
   summary:
     site: >-
-      Senior OutSystems engineer and architect with a decade of experience
-      designing, delivering, and scaling enterprise applications. OutSystems
-      Champion since 2022 with 50+ assets published on the OutSystems Forge.
-      Career spans R&D engineering at OutSystems, delivery management for
-      enterprise consultancies, and current architect role at Babel Group.
+      Senior OutSystems Solution Architect with a decade of experience designing,
+      delivering, and scaling enterprise applications. OutSystems Champion since
+      2022 and Architecture Specialist (O11 + ODC) since 2022 — with 3+ years of
+      formal architecture practice leadership across KinetIT and Babel (Top
+      OutSystems Partner Worldwide). Career spans R&D engineering at OutSystems,
+      delivery management for enterprise consultancies, and current Solution
+      Architect role at Babel.
     full: |
       "Finding the true form of the problem is more important than the answer that comes after."
 
@@ -131,7 +133,7 @@ experience:
       - Helped position Babel as a Top OutSystems Partner Worldwide and the #1 OutSystems Partner in Portugal during this tenure.
       - Design and audit OutSystems solutions to ensure they meet technical standards and align with long-term business goals.
       - Provide expert guidance on complex architectural decisions — robustness, scalability, and maintainability over short-term shortcuts.
-      - Partner with delivery teams to unblock projects, mentor engineers, and raise the bar on performance and quality.
+      - Partner with Scrum delivery teams to unblock projects, mentor engineers, and raise the bar on performance and quality.
       - Build business-critical solutions for the most demanding accounts, leveraging deep platform knowledge to handle the edge cases nobody else wants to touch.
 
   - company: KinetIT
@@ -295,7 +297,7 @@ experience:
     summary: Solution Architect and Team Leader on a nationally-critical Portuguese government program — re-platforming IRN's request submission and processing onto .NET Core microservices with a React/Next.js frontend.
     highlights:
       - Acted as Solution Architect and Team Leader for a nationally-critical Portuguese government project — unified platform for IRN request submission and processing, with full tech redesign and database remodeling.
-      - Led a multidisciplinary team of 10 inside a wider program of 70+ people across business and technology streams; served as the bridge between business and technology, aligning technical solutions with business needs.
+      - Led a multidisciplinary Scrum team of 10 inside a wider program of 70+ people across business and technology streams; served as the bridge between business and technology, aligning technical solutions with business needs.
       - Drove the re-platform from OutSystems to .NET Core / microservices / containers with a Next.js / React / TypeScript frontend and ApiSix API Gateway for performance, security and scalability.
       - Built the CI/CD foundation with Jenkins, ArgoCD, Sonatype Nexus Repository, and GitLab.
       - Operated in a context of business and technical modernization, leading prioritization, stakeholder negotiation, and architecture decisions across the program.
@@ -993,7 +995,7 @@ languages:
   - { name: Portuguese, level: Native,                cefr: C2, code: pt }
   - { name: English,    level: Professional working,  cefr: C1, code: en }
   - { name: Spanish,    level: Elementary,            cefr: A2, code: es }
-  - { name: French,     level: Elementary,            cefr: A2, code: fr }
+  - { name: French,     level: "Elementary · actively improving",  cefr: A2, code: fr }
 
 # ──────────────────────────────────────────────────
 # Principles — how I think about software
@@ -1035,7 +1037,7 @@ faq:
     a: Master's in Information Systems and Computer Engineering (2014) and Bachelor's in Computer and Information Sciences (2012), both from Instituto Superior Técnico, University of Lisbon.
 
   - q: What languages does António speak?
-    a: Portuguese (native, C2), English (professional working, C1), Spanish (elementary, A2), and French (elementary, A2).
+    a: Portuguese (native, C2), English (professional working, C1), Spanish (elementary, A2), and French (elementary, A2 — actively improving).
 
   - q: Has António worked at OutSystems directly?
     a: Yes. António spent 3 years 7 months at OutSystems (2014–2018) — first as a Knowledge Engineer, then as a Software Engineer on the Service Studio team in R&D, building the IDE used by every OutSystems developer.

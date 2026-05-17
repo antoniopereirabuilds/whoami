@@ -1,5 +1,5 @@
 import type { APIRoute } from 'astro';
-import { profile, site, honors, talks, recommendations, selectedClients } from '~/data/profile';
+import { profile, site, honors, talks, recommendations, selectedClients, languages } from '~/data/profile';
 
 // llms.txt — proposed standard for agent discovery. See: https://llmstxt.org/
 // Minimal index file pointing agents at the highest-signal resources.
@@ -35,7 +35,7 @@ export const GET: APIRoute = () => {
 - 50+ assets published on the OutSystems Forge
 - 10 OutSystems credentials (6 certifications, 2 specializations, 2 commercial)
 - MSc in Information Systems and Computer Engineering, Instituto Superior Técnico (2014)
-- Languages: ${['Portuguese (native, C2)', 'English (professional working, C1)', 'Spanish (elementary, A2)', 'French (elementary, A2)'].join(', ')}
+- Languages: ${languages.map((l) => `${l.name} (${l.level}, ${l.cefr})`).join(', ')}
 - Availability: ${profile.availability}
 
 ## Recent achievements
