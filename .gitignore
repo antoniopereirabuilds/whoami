@@ -26,3 +26,7 @@ pnpm-debug.log*
 
 # claude
 .claude/
+resources/MyMC_coverletter.md
+scripts/build-cover-letter-pdf.mjs
+resources/AP_coverletter.pdf
+resources/HANDOFF.md
