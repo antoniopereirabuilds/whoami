@@ -79,6 +79,22 @@
     },
     {
       "name": "Babel",
+      "position": "Architect · LowCode",
+      "url": "https://www.babelgroup.com/",
+      "location": "Lisbon, Portugal",
+      "startDate": "2025-09",
+      "endDate": "2026-03",
+      "summary": "Architected an OutSystems platform for NOS employee benefits — multi-benefit catalog, self-service portal, configurable eligibility rules, and integration with NOS core HR systems.",
+      "highlights": [
+        "Architected an OutSystems platform for employee benefits (health, education, well-being, mobility, insurance, partnerships, incentives) with eligibility rules configurable by role, seniority, level and contract type.",
+        "Designed the employee self-service portal with submission, tracking, plafond visibility, history, and the submit/validate/approve workflow with auto-routing by benefit type and approval hierarchy.",
+        "Led the integration strategy with NOS core systems (SAP HR, Active Directory) for employee, hierarchy, and organizational-structure sync.",
+        "Designed HR management dashboards (adoption per benefit, plafond consumption, cost trends, satisfaction) and a role-based access model (employee, manager, HR, admin, auditor) with encryption of personal/financial data.",
+        "Supervised delivery teams technically — architecture and code reviews, OutSystems best-practices enforcement (Architecture Canvas, 4-Layer Canvas), and a dynamic-config model for adding new benefits without code changes."
+      ]
+    },
+    {
+      "name": "Babel",
       "position": "Solution Architect · Team Leader",
       "url": "https://www.babelgroup.com/",
       "location": "Lisbon, Portugal",
@@ -375,7 +391,7 @@
   "meta": {
     "canonical": "https://antoniopereirabuilds.github.io/whoami/profile.json",
     "version": "1.0.0",
-    "lastModified": "2026-06-24T23:31:36.175Z",
+    "lastModified": "2026-06-24T23:35:56.151Z",
     "x_selectedClients": [
       {
         "industry": "Public sector",

@@ -5,7 +5,7 @@
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
 *Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-06-24T23:31:36.168Z*
+*Last generated: 2026-06-24T23:35:56.147Z*
 
 ## Summary
 
@@ -107,6 +107,23 @@ Architectural leadership across Babel's OutSystems practice in parallel with nam
 - Served as the technical voice for inbound OutSystems opportunities — pre-sales scoping, technical proposal defence, and POC delivery.
 - Mentored delivery teams across business-critical accounts, partnering with engineers to unblock complex architectural challenges and raise the bar on performance and quality.
 - Represented Babel's OutSystems practice in the community as an OutSystems Champion — sustained Forge contributions, partner-network engagement, and community presence.
+
+### Architect · LowCode · Babel · NOS Technology
+*Sep 2025 — Mar 2026 · Lisbon, Portugal*
+Company: https://www.babelgroup.com/
+Client industry: Telecommunications
+Client: Technology arm of NOS — Portugal's leading cable, internet, fixed and mobile telecom operator (~5M customers, listed on Euronext Lisbon).
+Project: Plataforma Benefícios V2
+Project description: Employee benefits submission and management platform with SAP HR + Active Directory integration.
+Technologies: OutSystems, REST API
+
+Architected an OutSystems platform for NOS employee benefits — multi-benefit catalog, self-service portal, configurable eligibility rules, and integration with NOS core HR systems.
+
+- Architected an OutSystems platform for employee benefits (health, education, well-being, mobility, insurance, partnerships, incentives) with eligibility rules configurable by role, seniority, level and contract type.
+- Designed the employee self-service portal with submission, tracking, plafond visibility, history, and the submit/validate/approve workflow with auto-routing by benefit type and approval hierarchy.
+- Led the integration strategy with NOS core systems (SAP HR, Active Directory) for employee, hierarchy, and organizational-structure sync.
+- Designed HR management dashboards (adoption per benefit, plafond consumption, cost trends, satisfaction) and a role-based access model (employee, manager, HR, admin, auditor) with encryption of personal/financial data.
+- Supervised delivery teams technically — architecture and code reviews, OutSystems best-practices enforcement (Architecture Canvas, 4-Layer Canvas), and a dynamic-config model for adding new benefits without code changes.
 
 ### Solution Architect · Team Leader · Babel · IRN — Instituto dos Registos e do Notariado
 *Oct 2024 — Jun 2025 · Lisbon, Portugal*
