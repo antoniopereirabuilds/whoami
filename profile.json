@@ -33,17 +33,48 @@
   "work": [
     {
       "name": "Babel",
-      "position": "OutSystems Architect",
+      "position": "Architect · Frontend",
+      "url": "https://www.babelgroup.com/",
+      "location": "Lisbon, Portugal",
+      "startDate": "2026-02",
+      "endDate": "2026-05",
+      "summary": "Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.",
+      "highlights": [
+        "Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.",
+        "Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.",
+        "Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.",
+        "Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.",
+        "Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle."
+      ]
+    },
+    {
+      "name": "Babel",
+      "position": "Architect · LowCode",
+      "url": "https://www.babelgroup.com/",
+      "location": "Lisbon, Portugal",
+      "startDate": "2025-09",
+      "summary": "Architected OutSystems solutions for the Portuguese securities/capital-markets regulator, ensuring compliance with supervisory and reporting requirements over regulated entities.",
+      "highlights": [
+        "Defined OutSystems solution architecture for CMVM projects, ensuring compliance with regulatory requirements for capital markets and securities oversight.",
+        "Designed application structure and data model supporting supervision, registration, reporting, and inspection processes over regulated entities.",
+        "Ran technical audits — performance, scalability, security, technical debt — and produced recommendation reports for in-flight projects.",
+        "Validated architecture and design decisions against OutSystems best practices (Architecture Canvas, 4-Layer Canvas) and CMVM's internal standards.",
+        "Supported delivery teams on complex technical challenges — legacy-system integrations, large-data processing, regulatory business-rule implementation."
+      ]
+    },
+    {
+      "name": "Babel",
+      "position": "OutSystems Architect · Practice & cross-engagement support",
       "url": "https://www.babelgroup.com/",
       "location": "Lisbon, Portugal",
       "startDate": "2024-06",
-      "summary": "Designs and audits OutSystems enterprise solutions; provides architectural guidance and mentors delivery teams across business-critical accounts.",
+      "summary": "Architectural leadership across Babel's OutSystems practice in parallel with named client engagements — cross-account audits, pre-sales architecture, mentoring, and contribution to firm-wide platform recognition.",
       "highlights": [
         "Helped position Babel as a Top OutSystems Partner Worldwide and the",
-        "Design and audit OutSystems solutions to ensure they meet technical standards and align with long-term business goals.",
-        "Provide expert guidance on complex architectural decisions — robustness, scalability, and maintainability over short-term shortcuts.",
-        "Partner with Scrum delivery teams to unblock projects, mentor engineers, and raise the bar on performance and quality.",
-        "Build business-critical solutions for the most demanding accounts, leveraging deep platform knowledge to handle the edge cases nobody else wants to touch."
+        "Provided architectural guidance and audits across multiple parallel client engagements, applying OutSystems best practices (Architecture Canvas, 4-Layer Canvas) consistently across the portfolio.",
+        "Served as the technical voice for inbound OutSystems opportunities — pre-sales scoping, technical proposal defence, and POC delivery.",
+        "Mentored delivery teams across business-critical accounts, partnering with engineers to unblock complex architectural challenges and raise the bar on performance and quality.",
+        "Represented Babel's OutSystems practice in the community as an OutSystems Champion — sustained Forge contributions, partner-network engagement, and community presence."
       ]
     },
     {
@@ -344,7 +375,7 @@
   "meta": {
     "canonical": "https://antoniopereirabuilds.github.io/whoami/profile.json",
     "version": "1.0.0",
-    "lastModified": "2026-06-24T23:03:32.481Z",
+    "lastModified": "2026-06-24T23:31:36.175Z",
     "x_selectedClients": [
       {
         "industry": "Public sector",

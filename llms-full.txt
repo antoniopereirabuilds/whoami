@@ -5,7 +5,7 @@
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
 *Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-06-24T23:03:32.476Z*
+*Last generated: 2026-06-24T23:31:36.168Z*
 
 ## Summary
 
@@ -62,17 +62,51 @@ Based in Lisbon, where I live with my wife and three kids — they are the reaso
 
 ## Experience
 
-### OutSystems Architect — Babel
+### Architect · Frontend · Babel · IRN — Instituto dos Registos e do Notariado
+*Feb 2026 — May 2026 · Lisbon, Portugal · Current*
+Company: https://www.babelgroup.com/
+Client industry: Public sector · Government registries
+Client: Portuguese government institute responsible for civil, commercial, and property registry services — the system of record for births, deaths, marriages, companies, and real estate nationwide.
+Project: Frontend support modules for registry systems
+Project description: Apoio e suporte aos sistemas de registo do IRN — frontend platform + AI-assisted development workflows.
+Technologies: TypeScript, React, REST API, .NET
+
+Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.
+
+- Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.
+- Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.
+- Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.
+- Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.
+- Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle.
+
+### Architect · LowCode · Babel · CMVM — Comissão do Mercado de Valores Mobiliários
+*Sep 2025 — Present · Lisbon, Portugal · Current*
+Company: https://www.babelgroup.com/
+Client industry: Public sector · Financial regulation
+Client: Portuguese securities and capital markets regulator — supervises listed companies, investment funds, and financial intermediaries operating in Portugal.
+Project: Low-code digital channels (additional scope)
+Project description: Low-code application development for the Portuguese securities/capital-markets regulator.
+Technologies: OutSystems
+
+Architected OutSystems solutions for the Portuguese securities/capital-markets regulator, ensuring compliance with supervisory and reporting requirements over regulated entities.
+
+- Defined OutSystems solution architecture for CMVM projects, ensuring compliance with regulatory requirements for capital markets and securities oversight.
+- Designed application structure and data model supporting supervision, registration, reporting, and inspection processes over regulated entities.
+- Ran technical audits — performance, scalability, security, technical debt — and produced recommendation reports for in-flight projects.
+- Validated architecture and design decisions against OutSystems best practices (Architecture Canvas, 4-Layer Canvas) and CMVM's internal standards.
+- Supported delivery teams on complex technical challenges — legacy-system integrations, large-data processing, regulatory business-rule implementation.
+
+### OutSystems Architect · Practice & cross-engagement support — Babel
 *Jun 2024 — Present · Lisbon, Portugal · Current*
 Company: https://www.babelgroup.com/
 
-Designs and audits OutSystems enterprise solutions; provides architectural guidance and mentors delivery teams across business-critical accounts.
+Architectural leadership across Babel's OutSystems practice in parallel with named client engagements — cross-account audits, pre-sales architecture, mentoring, and contribution to firm-wide platform recognition.
 
 - Helped position Babel as a Top OutSystems Partner Worldwide and the
-- Design and audit OutSystems solutions to ensure they meet technical standards and align with long-term business goals.
-- Provide expert guidance on complex architectural decisions — robustness, scalability, and maintainability over short-term shortcuts.
-- Partner with Scrum delivery teams to unblock projects, mentor engineers, and raise the bar on performance and quality.
-- Build business-critical solutions for the most demanding accounts, leveraging deep platform knowledge to handle the edge cases nobody else wants to touch.
+- Provided architectural guidance and audits across multiple parallel client engagements, applying OutSystems best practices (Architecture Canvas, 4-Layer Canvas) consistently across the portfolio.
+- Served as the technical voice for inbound OutSystems opportunities — pre-sales scoping, technical proposal defence, and POC delivery.
+- Mentored delivery teams across business-critical accounts, partnering with engineers to unblock complex architectural challenges and raise the bar on performance and quality.
+- Represented Babel's OutSystems practice in the community as an OutSystems Champion — sustained Forge contributions, partner-network engagement, and community presence.
 
 ### Solution Architect · Team Leader · Babel · IRN — Instituto dos Registos e do Notariado
 *Oct 2024 — Jun 2025 · Lisbon, Portugal*
