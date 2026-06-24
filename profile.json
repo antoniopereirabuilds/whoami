@@ -33,22 +33,6 @@
   "work": [
     {
       "name": "Babel",
-      "position": "Architect · Frontend",
-      "url": "https://www.babelgroup.com/",
-      "location": "Lisbon, Portugal",
-      "startDate": "2026-02",
-      "endDate": "2026-05",
-      "summary": "Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.",
-      "highlights": [
-        "Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.",
-        "Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.",
-        "Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.",
-        "Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.",
-        "Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle."
-      ]
-    },
-    {
-      "name": "Babel",
       "position": "Architect · LowCode",
       "url": "https://www.babelgroup.com/",
       "location": "Lisbon, Portugal",
@@ -75,6 +59,22 @@
         "Served as the technical voice for inbound OutSystems opportunities — pre-sales scoping, technical proposal defence, and POC delivery.",
         "Mentored delivery teams across business-critical accounts, partnering with engineers to unblock complex architectural challenges and raise the bar on performance and quality.",
         "Represented Babel's OutSystems practice in the community as an OutSystems Champion — sustained Forge contributions, partner-network engagement, and community presence."
+      ]
+    },
+    {
+      "name": "Babel",
+      "position": "Architect · Frontend",
+      "url": "https://www.babelgroup.com/",
+      "location": "Lisbon, Portugal",
+      "startDate": "2026-02",
+      "endDate": "2026-05",
+      "summary": "Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.",
+      "highlights": [
+        "Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.",
+        "Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.",
+        "Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.",
+        "Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.",
+        "Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle."
       ]
     },
     {
@@ -111,22 +111,6 @@
     },
     {
       "name": "KinetIT",
-      "position": "Architect",
-      "url": "https://www.kinetit.com/",
-      "location": "Lisbon, Portugal · client in Germany",
-      "startDate": "2023-01",
-      "endDate": "2023-09",
-      "summary": "Architected an OutSystems platform for managing and analyzing wind-tunnel aerodynamic tests across Volkswagen Group brands, including real-time telemetry ingestion from SCADA and data-logger systems.",
-      "highlights": [
-        "Designed an OutSystems-based solution for managing and analyzing wind-tunnel aerodynamic tests for Volkswagen Group brands — VW, Audi, Porsche, SEAT, Škoda, Lamborghini, Bentley.",
-        "Architected the data model and application structure for multi-brand configurations (brand, model, component type) with telemetry processing at scale.",
-        "Designed the test-configuration module with flexible parametrization of aerodynamic variables (wind speed, attack angle, temperature, pressure, drag and lift coefficients).",
-        "Architected real-time data ingestion from wind-tunnel acquisition systems (sensors, data loggers, SCADA) and the analysis layer with interactive dashboards comparing results across versions and brands.",
-        "Defined role-based access (test engineer, tunnel manager, data analyst, brand lead) and IP/sensitive-data protection across the group; supervised delivery teams and validated scalability for new tunnels, brands, and test types."
-      ]
-    },
-    {
-      "name": "KinetIT",
       "position": "OutSystems Success Manager",
       "url": "https://www.kinetit.com/",
       "location": "Lisbon, Portugal",
@@ -143,18 +127,18 @@
     },
     {
       "name": "KinetIT",
-      "position": "Tech Lead",
+      "position": "Architect",
       "url": "https://www.kinetit.com/",
-      "location": "Lisbon, Portugal",
-      "startDate": "2020-01",
-      "endDate": "2020-09",
-      "summary": "Tech-led an automated invoice-collection platform for the Luz Saúde healthcare group, with bidirectional Salesforce CRM integration, multi-channel communications, and risk-based debtor segmentation.",
+      "location": "Lisbon, Portugal · client in Germany",
+      "startDate": "2023-01",
+      "endDate": "2023-09",
+      "summary": "Architected an OutSystems platform for managing and analyzing wind-tunnel aerodynamic tests across Volkswagen Group brands, including real-time telemetry ingestion from SCADA and data-logger systems.",
       "highlights": [
-        "Tech-led the OutSystems platform for automated identification and management of unpaid-invoice collection processes at Luz Saúde, the major Portuguese healthcare group.",
-        "Designed the configurable rule engine (deadlines, late-stage tiers, contact strategies) and the staged auto-collection workflow (friendly reminder → formal notice → pre-litigation → litigation).",
-        "Architected bidirectional Salesforce CRM integration — case/task creation, client and opportunity sync, REST-API consultation — giving commercial teams real-time collection-status visibility.",
-        "Built multi-channel automated communications (email/SMS/letter with stage-and-segment templates), payment-agreement management, debtor segmentation by risk/amount/history, and dashboards (debt aging, recovery rate, contact-channel efficacy).",
-        "Ensured RGPD compliance for personal/financial data, role-based access (collection manager, finance analyst, commercial, admin), audit trail for legal/compliance, and reporting for regulators."
+        "Designed an OutSystems-based solution for managing and analyzing wind-tunnel aerodynamic tests for Volkswagen Group brands — VW, Audi, Porsche, SEAT, Škoda, Lamborghini, Bentley.",
+        "Architected the data model and application structure for multi-brand configurations (brand, model, component type) with telemetry processing at scale.",
+        "Designed the test-configuration module with flexible parametrization of aerodynamic variables (wind speed, attack angle, temperature, pressure, drag and lift coefficients).",
+        "Architected real-time data ingestion from wind-tunnel acquisition systems (sensors, data loggers, SCADA) and the analysis layer with interactive dashboards comparing results across versions and brands.",
+        "Defined role-based access (test engineer, tunnel manager, data analyst, brand lead) and IP/sensitive-data protection across the group; supervised delivery teams and validated scalability for new tunnels, brands, and test types."
       ]
     },
     {
@@ -168,6 +152,22 @@
       "highlights": [
         "Managed OutSystems delivery teams as both technical lead and people manager.",
         "Embedded with Do iT Lean for a single OutSystems delivery project during this period."
+      ]
+    },
+    {
+      "name": "KinetIT",
+      "position": "Tech Lead",
+      "url": "https://www.kinetit.com/",
+      "location": "Lisbon, Portugal",
+      "startDate": "2020-01",
+      "endDate": "2020-09",
+      "summary": "Tech-led an automated invoice-collection platform for the Luz Saúde healthcare group, with bidirectional Salesforce CRM integration, multi-channel communications, and risk-based debtor segmentation.",
+      "highlights": [
+        "Tech-led the OutSystems platform for automated identification and management of unpaid-invoice collection processes at Luz Saúde, the major Portuguese healthcare group.",
+        "Designed the configurable rule engine (deadlines, late-stage tiers, contact strategies) and the staged auto-collection workflow (friendly reminder → formal notice → pre-litigation → litigation).",
+        "Architected bidirectional Salesforce CRM integration — case/task creation, client and opportunity sync, REST-API consultation — giving commercial teams real-time collection-status visibility.",
+        "Built multi-channel automated communications (email/SMS/letter with stage-and-segment templates), payment-agreement management, debtor segmentation by risk/amount/history, and dashboards (debt aging, recovery rate, contact-channel efficacy).",
+        "Ensured RGPD compliance for personal/financial data, role-based access (collection manager, finance analyst, commercial, admin), audit trail for legal/compliance, and reporting for regulators."
       ]
     },
     {
@@ -391,7 +391,7 @@
   "meta": {
     "canonical": "https://antoniopereirabuilds.github.io/whoami/profile.json",
     "version": "1.0.0",
-    "lastModified": "2026-06-24T23:35:56.151Z",
+    "lastModified": "2026-06-24T23:44:35.795Z",
     "x_selectedClients": [
       {
         "industry": "Public sector",

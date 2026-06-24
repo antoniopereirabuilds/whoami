@@ -5,7 +5,7 @@
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
 *Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-06-24T23:35:56.147Z*
+*Last generated: 2026-06-24T23:44:35.790Z*
 
 ## Summary
 
@@ -62,23 +62,6 @@ Based in Lisbon, where I live with my wife and three kids — they are the reaso
 
 ## Experience
 
-### Architect · Frontend · Babel · IRN — Instituto dos Registos e do Notariado
-*Feb 2026 — May 2026 · Lisbon, Portugal · Current*
-Company: https://www.babelgroup.com/
-Client industry: Public sector · Government registries
-Client: Portuguese government institute responsible for civil, commercial, and property registry services — the system of record for births, deaths, marriages, companies, and real estate nationwide.
-Project: Frontend support modules for registry systems
-Project description: Apoio e suporte aos sistemas de registo do IRN — frontend platform + AI-assisted development workflows.
-Technologies: TypeScript, React, REST API, .NET
-
-Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.
-
-- Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.
-- Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.
-- Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.
-- Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.
-- Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle.
-
 ### Architect · LowCode · Babel · CMVM — Comissão do Mercado de Valores Mobiliários
 *Sep 2025 — Present · Lisbon, Portugal · Current*
 Company: https://www.babelgroup.com/
@@ -107,6 +90,23 @@ Architectural leadership across Babel's OutSystems practice in parallel with nam
 - Served as the technical voice for inbound OutSystems opportunities — pre-sales scoping, technical proposal defence, and POC delivery.
 - Mentored delivery teams across business-critical accounts, partnering with engineers to unblock complex architectural challenges and raise the bar on performance and quality.
 - Represented Babel's OutSystems practice in the community as an OutSystems Champion — sustained Forge contributions, partner-network engagement, and community presence.
+
+### Architect · Frontend · Babel · IRN — Instituto dos Registos e do Notariado
+*Feb 2026 — May 2026 · Lisbon, Portugal*
+Company: https://www.babelgroup.com/
+Client industry: Public sector · Government registries
+Client: Portuguese government institute responsible for civil, commercial, and property registry services — the system of record for births, deaths, marriages, companies, and real estate nationwide.
+Project: Frontend support modules for registry systems
+Project description: Apoio e suporte aos sistemas de registo do IRN — frontend platform + AI-assisted development workflows.
+Technologies: TypeScript, React, REST API, .NET
+
+Defined frontend architecture for the IRN registry support modules; piloted and rolled out Claude AI as a development accelerator across the frontend team.
+
+- Defined frontend architecture, component patterns, navigation structure and UI guidelines for IRN's registry support modules; mentored the frontend team on architectural alignment and usability requirements.
+- Piloted and rolled out Claude AI as a frontend development accelerator — concrete use cases (code generation, component prototyping, code review, unit-test creation, technical docs) and AI-assisted workflows with prompting best practices and output-validation gates.
+- Drove team adoption of Claude AI through training sessions, knowledge sharing, and a reusable prompt library tailored to the IRN context.
+- Ensured integration with IRN's existing civil registry backend services and APIs; enforced compliance with security, RGPD, and Portuguese public-sector standards.
+- Monitored productivity and quality metrics before/after AI introduction, iterating to maximize AI's impact on the development cycle.
 
 ### Architect · LowCode · Babel · NOS Technology
 *Sep 2025 — Mar 2026 · Lisbon, Portugal*
@@ -142,6 +142,18 @@ Solution Architect and Team Leader on a nationally-critical Portuguese governmen
 - Built the CI/CD foundation with Jenkins, ArgoCD, Sonatype Nexus Repository, and GitLab.
 - Operated in a context of business and technical modernization, leading prioritization, stakeholder negotiation, and architecture decisions across the program.
 
+### OutSystems Success Manager — KinetIT
+*Feb 2022 — Jul 2024 · Lisbon, Portugal*
+Company: https://www.kinetit.com/
+
+Led the OutSystems practice — trained developers, owned architectural reviews and estimations, and built KinetIT's OutSystems Knowledge Base.
+
+- Helped drive the KinetIT OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge.
+- Led the OutSystems practice — trained and coached developers through certifications, kept the team current on platform releases, and grew the OutSystems skill base inside the org.
+- Built the OutSystems Knowledge Base — a centralized repository of patterns, code samples, and docs that cut ramp-up time for new projects.
+- Owned architectural reviews, estimations, and POCs across the practice; the technical voice for new opportunities.
+- Delivered projects end-to-end against budget and timeline while keeping stakeholders aligned.
+
 ### Architect · KinetIT · Volkswagen Group (Germany)
 *Jan 2023 — Sep 2023 · Lisbon, Portugal · client in Germany*
 Company: https://www.kinetit.com/
@@ -159,17 +171,14 @@ Architected an OutSystems platform for managing and analyzing wind-tunnel aerody
 - Architected real-time data ingestion from wind-tunnel acquisition systems (sensors, data loggers, SCADA) and the analysis layer with interactive dashboards comparing results across versions and brands.
 - Defined role-based access (test engineer, tunnel manager, data analyst, brand lead) and IP/sensitive-data protection across the group; supervised delivery teams and validated scalability for new tunnels, brands, and test types.
 
-### OutSystems Success Manager — KinetIT
-*Feb 2022 — Jul 2024 · Lisbon, Portugal*
+### Delivery Manager — KinetIT
+*Jun 2019 — Feb 2022 · Lisbon, Portugal*
 Company: https://www.kinetit.com/
 
-Led the OutSystems practice — trained developers, owned architectural reviews and estimations, and built KinetIT's OutSystems Knowledge Base.
+Managed OutSystems delivery teams as both technical lead and people manager; embedded with partner consultancies on critical engagements.
 
-- Helped drive the KinetIT OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge.
-- Led the OutSystems practice — trained and coached developers through certifications, kept the team current on platform releases, and grew the OutSystems skill base inside the org.
-- Built the OutSystems Knowledge Base — a centralized repository of patterns, code samples, and docs that cut ramp-up time for new projects.
-- Owned architectural reviews, estimations, and POCs across the practice; the technical voice for new opportunities.
-- Delivered projects end-to-end against budget and timeline while keeping stakeholders aligned.
+- Managed OutSystems delivery teams as both technical lead and people manager.
+- Embedded with Do iT Lean for a single OutSystems delivery project during this period.
 
 ### Tech Lead · KinetIT · Luz Saúde
 *Jan 2020 — Sep 2020 · Lisbon, Portugal*
@@ -187,15 +196,6 @@ Tech-led an automated invoice-collection platform for the Luz Saúde healthcare 
 - Architected bidirectional Salesforce CRM integration — case/task creation, client and opportunity sync, REST-API consultation — giving commercial teams real-time collection-status visibility.
 - Built multi-channel automated communications (email/SMS/letter with stage-and-segment templates), payment-agreement management, debtor segmentation by risk/amount/history, and dashboards (debt aging, recovery rate, contact-channel efficacy).
 - Ensured RGPD compliance for personal/financial data, role-based access (collection manager, finance analyst, commercial, admin), audit trail for legal/compliance, and reporting for regulators.
-
-### Delivery Manager — KinetIT
-*Jun 2019 — Feb 2022 · Lisbon, Portugal*
-Company: https://www.kinetit.com/
-
-Managed OutSystems delivery teams as both technical lead and people manager; embedded with partner consultancies on critical engagements.
-
-- Managed OutSystems delivery teams as both technical lead and people manager.
-- Embedded with Do iT Lean for a single OutSystems delivery project during this period.
 
 ### Tech Lead · OutSystems Consultant — Outfit (now Devoteam)
 *Mar 2018 — May 2019 · Lisbon, Portugal*
