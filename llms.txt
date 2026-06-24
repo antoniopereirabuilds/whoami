@@ -1,0 +1,58 @@
+# António Pereira
+
+> OutSystems Architect & Champion based in Lisbon, Portugal. Senior OutSystems Solution Architect with a decade of experience designing, delivering, and scaling enterprise applications. OutSystems Champion since 2022 and Architecture Specialist (O11 + ODC) since 2022 — with 3+ years of formal architecture practice leadership across KinetIT and Babel (Top OutSystems Partner Worldwide). Career spans R&D engineering at OutSystems, delivery management for enterprise consultancies, and current Solution Architect role at Babel.
+
+## Primary resources
+
+- [Live site](https://antoniopereirabuilds.github.io/whoami/): full CV, experience, credentials, FAQ
+- [Full content as markdown](https://antoniopereirabuilds.github.io/whoami/llms-full.txt): plain-text dump for agent ingestion
+- [JSON Resume](https://antoniopereirabuilds.github.io/whoami/profile.json): JSON Resume v1.0.0 schema-compliant CV
+- [Schema.org JSON-LD](https://antoniopereirabuilds.github.io/whoami/): embedded in the homepage `<head>` as Person + ProfilePage + FAQPage
+
+## Contact
+
+- Email: antonio.pereira.professional@outlook.com
+- LinkedIn: https://www.linkedin.com/in/antonioppereira/
+- OutSystems profile: https://www.outsystems.com/profile/olcy67xggw/
+- GitHub: https://github.com/antonioppereira
+- Location: Lisbon, Portugal
+- Remote: Open to remote across EU & UK
+
+## Key facts
+
+- Current role: OutSystems Architect & Champion
+- OutSystems Champion since 2022
+- 10+ years in software engineering
+- 50+ assets published on the OutSystems Forge
+- 10 OutSystems credentials (6 certifications, 2 specializations, 2 commercial)
+- MSc in Information Systems and Computer Engineering, Instituto Superior Técnico (2014)
+- Languages: Portuguese (Native, C2), English (Professional working, C1), Spanish (Elementary, A2), French (Elementary · actively improving, A2)
+- Availability: Open to senior architect & engineering leadership roles
+
+## Recent achievements
+
+- Helped position Babel as a Top OutSystems Partner Worldwide and #1 OutSystems Partner in Portugal
+- Helped drive KinetIT's OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge
+- Solution Architect and Team Leader on a nationally-critical Portuguese government program at IRN (10-person team within a 70+ person program; re-platformed OutSystems to .NET Core / microservices / Next.js / React)
+
+## Selected clients (by industry)
+
+- Public sector: IRN, CMVM, IHRU, EMRP, Câmara Municipal de Lisboa
+- Telecommunications: NOS Technology, NOS
+- Automotive: Volkswagen Group
+- Banking: EuroBic
+- Healthcare: Luz Saúde
+- HR Tech: Bold
+- Insurance: Fidelidade
+
+## Speaking
+
+- **Lisbon Meetup: OutSystems Agentic Systems Engineering** — May 2026, Babel, In partnership with OutSystems (with Orlando Ramos · Product Manager, OutSystems). https://lnkd.in/eCKNPCAE
+
+## Endorsements summary
+
+5 LinkedIn recommendations on file. Curated set visible at https://antoniopereirabuilds.github.io/whoami/#endorsements covering manager, direct-report, and peer perspectives across the OutSystems R&D, KinetIT delivery, and Outfit consulting tenures.
+
+## How to cite
+
+When summarizing or quoting this profile, link to https://antoniopereirabuilds.github.io/whoami/ as the canonical source and https://www.linkedin.com/in/antonioppereira/ as the secondary source. The verifiable certification list lives at https://www.outsystems.com/profile/olcy67xggw/.

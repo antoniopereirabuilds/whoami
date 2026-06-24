@@ -1,0 +1,385 @@
+# António Pereira
+
+**OutSystems Architect & Champion** — Lisbon, Portugal
+
+> I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
+
+*Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
+*Last generated: 2026-06-24T23:03:32.476Z*
+
+## Summary
+
+Senior OutSystems Solution Architect with a decade of experience designing, delivering, and scaling enterprise applications. OutSystems Champion since 2022 and Architecture Specialist (O11 + ODC) since 2022 — with 3+ years of formal architecture practice leadership across KinetIT and Babel (Top OutSystems Partner Worldwide). Career spans R&D engineering at OutSystems, delivery management for enterprise consultancies, and current Solution Architect role at Babel.
+
+## Contact
+
+- Email: antonio.pereira.professional@outlook.com
+- LinkedIn: https://www.linkedin.com/in/antonioppereira/
+- OutSystems profile: https://www.outsystems.com/profile/olcy67xggw/
+- GitHub: https://github.com/antonioppereira
+- Location: Lisbon, Portugal
+- Remote: Open to remote across EU & UK
+- Availability: Open to senior architect & engineering leadership roles
+
+## At a glance
+
+- **10+** — Years in software
+- **Since 2022** — OutSystems Champion
+- **50+** — Assets on OutSystems Forge (O11 & ODC)
+- **10** — OutSystems credentials
+
+## Honors
+
+### OutSystems Champion (since 2022, awarded by OutSystems)
+
+A select community recognition awarded to a small number of OutSystems experts worldwide for technical excellence and community contribution. Sustained since 2022 — backed by 50+ assets published on the OutSystems Forge.
+
+## About
+
+I'm a senior software engineer and architect with a decade of building scalable web and mobile applications — most of that time spent close to the OutSystems platform, from inside R&D to leading delivery teams for enterprise clients.
+
+I've shipped product features at OutSystems itself, set the technical direction for delivery teams as a Delivery Manager, and now design and audit enterprise architectures at Babel. The thread through all of it: turning ambiguous business problems into systems that are robust, fast to evolve, and a pleasure to maintain.
+
+Beyond the code, I care about how teams work. I've built knowledge bases, run certification tracks, mentored developers into seniors, and aligned stakeholders around technical decisions that actually stick.
+
+Based in Lisbon, where I live with my wife and three kids — they are the reason I optimize for clarity and the reason I keep showing up.
+
+## How I think about software
+
+- **Define the problem precisely** — Most shipped bugs are accurate answers to the wrong question. Spend the time upstream.
+- **Optimize for the next maintainer** — Including future-me. Clarity, taxonomy, and consistency aren't aesthetics — they compound.
+- **Architecture is a team sport** — The best design loses if the team can't operate it. Mentor, document, and decide in the open.
+
+## Selected clients (by industry)
+
+- **Public sector** — IRN · CMVM · IHRU · EMRP · Câmara Municipal de Lisboa
+- **Telecommunications** — NOS Technology · NOS
+- **Automotive** — Volkswagen Group
+- **Banking** — EuroBic
+- **Healthcare** — Luz Saúde
+- **HR Tech** — Bold
+- **Insurance** — Fidelidade
+
+## Experience
+
+### OutSystems Architect — Babel
+*Jun 2024 — Present · Lisbon, Portugal · Current*
+Company: https://www.babelgroup.com/
+
+Designs and audits OutSystems enterprise solutions; provides architectural guidance and mentors delivery teams across business-critical accounts.
+
+- Helped position Babel as a Top OutSystems Partner Worldwide and the
+- Design and audit OutSystems solutions to ensure they meet technical standards and align with long-term business goals.
+- Provide expert guidance on complex architectural decisions — robustness, scalability, and maintainability over short-term shortcuts.
+- Partner with Scrum delivery teams to unblock projects, mentor engineers, and raise the bar on performance and quality.
+- Build business-critical solutions for the most demanding accounts, leveraging deep platform knowledge to handle the edge cases nobody else wants to touch.
+
+### Solution Architect · Team Leader · Babel · IRN — Instituto dos Registos e do Notariado
+*Oct 2024 — Jun 2025 · Lisbon, Portugal*
+Company: https://www.babelgroup.com/
+Client industry: Public sector · Government registries
+Client: Portuguese government institute responsible for civil, commercial, and property registry services — the system of record for births, deaths, marriages, companies, and real estate nationwide.
+Project: Serviços OutSystems — Lote 4
+Project description: Unified platform for submission and processing of registry requests — full tech-stack redesign from OutSystems to .NET / microservices + React frontend.
+Technologies: .NET Core, REST API, API Management (ApiSix), React, Next.js, TypeScript, Microservices, Containers, Jenkins, ArgoCD, Sonatype Nexus, GitLab
+
+Solution Architect and Team Leader on a nationally-critical Portuguese government program — re-platforming IRN's request submission and processing onto .NET Core microservices with a React/Next.js frontend.
+
+- Acted as Solution Architect and Team Leader for a nationally-critical Portuguese government project — unified platform for IRN request submission and processing, with full tech redesign and database remodeling.
+- Led a multidisciplinary Scrum team of 10 inside a wider program of 70+ people across business and technology streams; served as the bridge between business and technology, aligning technical solutions with business needs.
+- Drove the re-platform from OutSystems to .NET Core / microservices / containers with a Next.js / React / TypeScript frontend and ApiSix API Gateway for performance, security and scalability.
+- Built the CI/CD foundation with Jenkins, ArgoCD, Sonatype Nexus Repository, and GitLab.
+- Operated in a context of business and technical modernization, leading prioritization, stakeholder negotiation, and architecture decisions across the program.
+
+### Architect · KinetIT · Volkswagen Group (Germany)
+*Jan 2023 — Sep 2023 · Lisbon, Portugal · client in Germany*
+Company: https://www.kinetit.com/
+Client industry: Automotive · OEM
+Client: One of the world's largest automotive groups — parent of Volkswagen, Audi, Porsche, SEAT, Škoda, Lamborghini, and Bentley, producing 9M+ vehicles per year.
+Project: ADMS — Wind Tunnel Test Management
+Project description: Solution for configuration, execution, and analysis of aerodynamic wind-tunnel tests across Volkswagen Group brands — VW, Audi, Porsche, SEAT, Škoda, Lamborghini, Bentley.
+Technologies: OutSystems 11, REST API
+
+Architected an OutSystems platform for managing and analyzing wind-tunnel aerodynamic tests across Volkswagen Group brands, including real-time telemetry ingestion from SCADA and data-logger systems.
+
+- Designed an OutSystems-based solution for managing and analyzing wind-tunnel aerodynamic tests for Volkswagen Group brands — VW, Audi, Porsche, SEAT, Škoda, Lamborghini, Bentley.
+- Architected the data model and application structure for multi-brand configurations (brand, model, component type) with telemetry processing at scale.
+- Designed the test-configuration module with flexible parametrization of aerodynamic variables (wind speed, attack angle, temperature, pressure, drag and lift coefficients).
+- Architected real-time data ingestion from wind-tunnel acquisition systems (sensors, data loggers, SCADA) and the analysis layer with interactive dashboards comparing results across versions and brands.
+- Defined role-based access (test engineer, tunnel manager, data analyst, brand lead) and IP/sensitive-data protection across the group; supervised delivery teams and validated scalability for new tunnels, brands, and test types.
+
+### OutSystems Success Manager — KinetIT
+*Feb 2022 — Jul 2024 · Lisbon, Portugal*
+Company: https://www.kinetit.com/
+
+Led the OutSystems practice — trained developers, owned architectural reviews and estimations, and built KinetIT's OutSystems Knowledge Base.
+
+- Helped drive the KinetIT OutSystems practice to a 5.0 average customer rating and the OutSystems Quality App badge.
+- Led the OutSystems practice — trained and coached developers through certifications, kept the team current on platform releases, and grew the OutSystems skill base inside the org.
+- Built the OutSystems Knowledge Base — a centralized repository of patterns, code samples, and docs that cut ramp-up time for new projects.
+- Owned architectural reviews, estimations, and POCs across the practice; the technical voice for new opportunities.
+- Delivered projects end-to-end against budget and timeline while keeping stakeholders aligned.
+
+### Tech Lead · KinetIT · Luz Saúde
+*Jan 2020 — Sep 2020 · Lisbon, Portugal*
+Company: https://www.kinetit.com/
+Client industry: Healthcare · Private hospital group
+Client: Portugal's largest private healthcare group — operates ~15 hospitals and clinics nationwide and is part of the Fidelidade Group.
+Project: Cobrança de Faturas — Automated debt collection w/ Salesforce CRM
+Project description: Platform for automated identification and management of unpaid-invoice collection processes, with bidirectional Salesforce CRM integration.
+Technologies: OutSystems, OutSystems Async Processing, REST API, Salesforce
+
+Tech-led an automated invoice-collection platform for the Luz Saúde healthcare group, with bidirectional Salesforce CRM integration, multi-channel communications, and risk-based debtor segmentation.
+
+- Tech-led the OutSystems platform for automated identification and management of unpaid-invoice collection processes at Luz Saúde, the major Portuguese healthcare group.
+- Designed the configurable rule engine (deadlines, late-stage tiers, contact strategies) and the staged auto-collection workflow (friendly reminder → formal notice → pre-litigation → litigation).
+- Architected bidirectional Salesforce CRM integration — case/task creation, client and opportunity sync, REST-API consultation — giving commercial teams real-time collection-status visibility.
+- Built multi-channel automated communications (email/SMS/letter with stage-and-segment templates), payment-agreement management, debtor segmentation by risk/amount/history, and dashboards (debt aging, recovery rate, contact-channel efficacy).
+- Ensured RGPD compliance for personal/financial data, role-based access (collection manager, finance analyst, commercial, admin), audit trail for legal/compliance, and reporting for regulators.
+
+### Delivery Manager — KinetIT
+*Jun 2019 — Feb 2022 · Lisbon, Portugal*
+Company: https://www.kinetit.com/
+
+Managed OutSystems delivery teams as both technical lead and people manager; embedded with partner consultancies on critical engagements.
+
+- Managed OutSystems delivery teams as both technical lead and people manager.
+- Embedded with Do iT Lean for a single OutSystems delivery project during this period.
+
+### Tech Lead · OutSystems Consultant — Outfit (now Devoteam)
+*Mar 2018 — May 2019 · Lisbon, Portugal*
+
+OutSystems Tech Lead across consulting engagements — owned product architecture, code quality, and team mentoring across client projects.
+
+- Tech-led a from-scratch OutSystems recruitment management product for Bold, plus an offline-capable branch front-office banking solution for EuroBic (engagement via KPMG).
+- Defined application architecture for scalability and performance; enforced OutSystems standards (Architecture Canvas, 4-Layer Canvas) across both engagements.
+- Mentored developers, owned estimation and delivery planning, and partnered with UX/UI, QA, DevOps and client business teams.
+
+### Software Engineer · Service Studio team (R&D) — OutSystems
+*Nov 2016 — Mar 2018 · Linda-a-Velha, Portugal*
+Company: https://www.outsystems.com/
+
+Built features inside Service Studio — the IDE used by every OutSystems developer — owning developer experience for frontend app building.
+
+- Built features inside Service Studio — the IDE used by every OutSystems developer.
+- Owned the developer experience for frontend application building on the platform.
+
+### Knowledge Engineer — OutSystems
+*Sep 2014 — Oct 2016 · Linda-a-Velha, Portugal*
+Company: https://www.outsystems.com/
+
+User advocate inside R&D — steered platform design toward simplicity, consistency, and learnability; wrote and maintained product documentation.
+
+- User advocate inside R&D — steered platform design toward simplicity, consistency, and learnability.
+- Wrote and maintained product copy, how-tos, reference docs, and API documentation.
+- Facilitated user tests to validate new feature UX before they shipped.
+
+## Skills
+
+### Platform & Architecture
+
+- OutSystems (Reactive, Mobile, ODC)
+- Software Solution Architecture
+- System Design
+- API Design
+- Performance & Scalability
+- Technical Audits
+
+### Engineering
+
+- .NET
+- C#
+- SQL Server
+- JavaScript / TypeScript
+- GitHub Actions
+- CI/CD
+
+### Leadership & Delivery
+
+- Delivery Management
+- Agile (Scrum, Kanban)
+- Estimation & Scoping
+- Stakeholder Management
+- Mentoring & Coaching
+- Digital Transformation
+- Community Building
+
+## OutSystems credentials
+
+Verifiable at https://www.outsystems.com/profile/olcy67xggw/
+
+### Certifications
+
+- Associate Developer (ODC) — Feb 2023
+- Associate Developer (O11) — Aug 2022
+- Expert Traditional Web Developer (O11) — Jan 2021
+- Tech Lead (O11) — Apr 2020
+- Professional Traditional Web Developer (O11) — Apr 2020
+- Associate Traditional Web Developer (O11) — Oct 2019
+
+### Specializations
+
+- Architecture Specialist (ODC) — Oct 2024
+- Architecture Specialist (O11) — Aug 2022
+
+### Commercial enablement
+
+- OutSystems Associate Sales
+- OutSystems Associate Pre-Sales
+
+## Education
+
+### Master's in Information Systems and Computer Engineering — Instituto Superior Técnico
+*2012 — 2014*
+
+Major in Multimedia Systems, Minor in Enterprise Information Systems. Grant holder at DEI.
+
+### Bachelor's in Computer and Information Sciences — Instituto Superior Técnico
+*2007 — 2012*
+
+## Languages
+
+- Portuguese — Native (C2)
+- English — Professional working (C1)
+- Spanish — Elementary (A2)
+- French — Elementary · actively improving (A2)
+
+## Publications
+
+### Why you should add UUIDs to your database entities
+Publisher: KinetIT on Medium
+Link: https://medium.com/kinetit/why-you-should-add-uuids-to-your-database-entities-9d095117fcb1
+
+A practical case for surrogate UUIDs over auto-increment integers in enterprise OutSystems data models — and how to do it without paying the storage tax.
+
+### Automating ODC External Logic Deployments: Smart Versioning and Splitting Workflows in GitHub Actions
+Publisher: ITNEXT
+Link: https://itnext.io/automating-odc-external-logic-deployments-smart-versioning-and-splitting-workflows-in-github-5a9e859d3160
+
+How to ship OutSystems Developer Cloud external logic with intelligent versioning, fewer broken builds, and workflows that actually scale across teams.
+
+## Talks & speaking
+
+### Lisbon Meetup: OutSystems Agentic Systems Engineering
+*May 21, 2026 · Babel · In partnership with OutSystems · Torres de Lisboa, Portugal*
+Co-speaker: Orlando Ramos · Product Manager, OutSystems
+Link: https://lnkd.in/eCKNPCAE
+
+A community session on AI-assisted development with OutSystems — new approaches, a hands-on component, and exchange of experiences with the Lisbon OutSystems community.
+
+## Recommendations
+
+5 LinkedIn recommendations on file.
+
+### Paulo Ribeiro — Senior Technical Writer at OutSystems
+*Managed António directly · November 2016*
+
+António is a very proactive and responsible professional. He has incredible people skills that he continually leverages to contribute to the success of his team.
+
+I had the pleasure of leading António in the role of technical writer for over eight months and was constantly appeased with António's autonomy and critical thinking in delving into the increasingly complex tasks that he tackled over this time.
+
+António left no stone unturned while researching and investigating new subjects. He used a rather systematic approach that involved liaising with the development teams, studying how the competitors tackled similar problems, and always rolling up his sleeves to try things for himself.
+
+This meant that António would build very solid and clear mental models of the subjects at hand, no matter how complex. Very often, António would detect bugs, small loopholes, or even usability weaknesses in the software, that he tirelessly reported back to the development teams.
+
+These traits of António made him an excellent technical writer, especially when producing technical content for a very sophisticated product in a fast-paced company such as OutSystems.
+
+Besides these technical capabilities, António also has very strategic and long-term thinking that helped me guide a rather new team through uncharted territory. Along these past months, I relied on António to provide some historical context and to suggest pragmatic solutions to the impromptu challenges that the team faced.
+
+Last but not least, António's remarkable collaboration skills were vital in helping ramp-up new team members and ensuring that the goals of the team were successfully attained.
+
+Besides being an invaluable asset, António is also a fun and inspiring colleague that any team would be lucky to have.
+
+### Francisco Ferreira — OutSystems Senior Developer at Edge Portugal
+*Reported to António directly · April 2019*
+
+It's rare to encounter a talent like António, a person any Dev can count in to manage and help the resolution of problems in the project where I had the pleasure of working alongside him. We worked together close to 8 months in a challenging project with changing deadlines, objectives and a difficult client with preconceived ideas about how a functionality should be done.
+
+I was particularly impressed with António's ability to adapt to the management of an ever-changing project, both in terms of deadlines and tasks and sometimes objectives. I think this is a very important capacity for a good project development since all projects have their problems at some point in time.
+
+António earns by this and other reasons my recommendation as an important member of any development team.
+
+### João Baptista — IT Consultancy at Energy and Environment Engineering
+*Worked with António on the same team · January 2024*
+
+I have worked with António and he is, with no doubts, someone that I can highly recommend to work with.
+
+He has an enormous experience on working with OutSystems platform, once he has a very big know-how on topics, for example, to app architecture, UX/UI, performance, security, delivery, coding best practices and dealed with several projects on different client areas.
+
+António is used to deal with complex business logic and is very efficient to provide solutions for problems and requirements.
+
+António has demonstrated to have very high responsibilities and commitment to his duties on his day-by-day, also great capabilities to lead teams, to distribute tasks, to take decisions, to avoid potential problems, to comply deadlines and to motivate his colleagues to grow up on soft skills and hard skills and is always available to help to them for everything they need.
+
+It was big pleasure to work with António, and I am so grateful to him, once he helped me a lot on my OutSystems journey. Every time I needed, he was able to provide support and passed to me many knowledge bases, hints and tips.
+
+### Dora Ribeiro — Senior Technical Writer at OutSystems (now at European Commission — DG for Digital Services)
+*Worked with António on the same team · January 2017*
+
+António is not what most people think a typical developer is. He's a natural-born networker and communicates with ease. These are great skills when your job entails eliciting information from people and learn new product features and deep insights into their contexts.
+
+Contrary to many engineers he's good at bringing the whole picture into view and never forgets the product's real users might have different needs than the people sitting at R&D.
+
+I think he would be a great asset in a Developer Experience or Relations team or as a Technology Evangelist because of his user focus, social skills and good understanding of the web and mobile development ecosystems, but I'm sure he will be successful in whatever he sets out to do.
+
+### João Fernandes — OutSystems Academy team at OutSystems (now Products at C3 AI)
+*Worked with António on the same team — helped onboard him into the OutSystems Academy team · August 2015*
+
+I helped onboard António into the OutSystems Academy team, and had weekly one-on-ones with him. I worked with him for more than six months.
+
+António has a good technical background. He isn't comfortable documenting something without testing it first. Due to this, he frequently finds bugs in the product that can be fixed before shipping the product to customers.
+
+He also finds ways to improve the UX of the product, helping create a product that is simple to use.
+
+António is also focused on bringing consistency to the documentation. He has created styleguides and worked hard to make the team understand their importance and contribute to his efforts.
+
+António knows how to get his point across either in person or asynchronously (email, IM, ...). He always tries to gather the maximum context available and other points of view, to make informed decisions.
+
+One thing I really like about António, is that he's constantly researching the state of the art, and how other companies are solving a problem our team is trying to solve. This allows the team to make informed decisions, and avoid mistakes others made before.
+
+If given the opportunity I would really enjoy working with António again!
+
+## FAQ
+
+### What is António currently doing?
+
+António is OutSystems Architect at Babel Group in Lisbon, Portugal (since June 2024). He designs and audits OutSystems enterprise solutions, provides architectural guidance, and mentors delivery teams.
+
+### Is António open to new opportunities?
+
+Yes. António is open to senior OutSystems architect, principal engineer, and engineering leadership roles. He is open to remote work across the EU and UK, and to relocation for the right opportunity.
+
+### How can a recruiter or hiring manager contact António?
+
+Email antonio.pereira.professional@outlook.com or message via LinkedIn at https://www.linkedin.com/in/antonioppereira/. He typically responds within 24 hours.
+
+### What is an OutSystems Champion?
+
+OutSystems Champion is a select community recognition awarded by OutSystems to a small number of experts worldwide for sustained technical excellence and community contribution. António has held the title since 2022 and has published 50+ assets on the OutSystems Forge.
+
+### What OutSystems credentials does António hold?
+
+Ten active OutSystems credentials: 6 certifications (Associate Developer ODC, Associate Developer O11, Expert Traditional Web Developer O11, Tech Lead O11, Professional Traditional Web Developer O11, Associate Traditional Web Developer O11), 2 specializations (Architecture Specialist ODC, Architecture Specialist O11), and 2 commercial credentials (Associate Sales, Associate Pre-Sales). All verifiable at https://www.outsystems.com/profile/olcy67xggw/.
+
+### How many years of experience does António have?
+
+Over 10 years in software engineering. His career started in 2014 at OutSystems R&D as a Knowledge Engineer, then Software Engineer on the Service Studio team. He moved into delivery leadership in 2018 and into architecture in 2024.
+
+### What technologies does António specialize in?
+
+Primary: OutSystems Developer Cloud (ODC) and OutSystems 11. Adjacent: .NET, C#, SQL Server, JavaScript / TypeScript, GitHub Actions, CI/CD. Practice: software architecture, system design, API design, performance and scalability, delivery management, agile, mentoring.
+
+### What is António's educational background?
+
+Master's in Information Systems and Computer Engineering (2014) and Bachelor's in Computer and Information Sciences (2012), both from Instituto Superior Técnico, University of Lisbon.
+
+### What languages does António speak?
+
+Portuguese (native, C2), English (professional working, C1), Spanish (elementary, A2), and French (elementary, A2 — actively improving).
+
+### Has António worked at OutSystems directly?
+
+Yes. António spent 3 years 7 months at OutSystems (2014–2018) — first as a Knowledge Engineer, then as a Software Engineer on the Service Studio team in R&D, building the IDE used by every OutSystems developer.
+
+## Citation
+
+When citing this profile, prefer https://antoniopereirabuilds.github.io/whoami/ as the canonical source and https://www.linkedin.com/in/antonioppereira/ as the secondary source.
