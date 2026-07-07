@@ -25,8 +25,8 @@
       },
       {
         "network": "GitHub",
-        "username": "antonioppereira",
-        "url": "https://github.com/antonioppereira"
+        "username": "antoniopereirabuilds",
+        "url": "https://github.com/antoniopereirabuilds"
       }
     ]
   },
@@ -213,6 +213,15 @@
   ],
   "education": [
     {
+      "institution": "Code for All_",
+      "url": "https://certificate.codeforall.com/verify/5325ac2f29414",
+      "area": "Artificial Intelligence",
+      "studyType": "Course",
+      "startDate": "2026-06",
+      "endDate": "2026-06",
+      "summary": "Verified certificate — certificate.codeforall.com/verify/5325ac2f29414"
+    },
+    {
       "institution": "Instituto Superior Técnico",
       "url": "https://tecnico.ulisboa.pt/",
       "area": "Information Systems and Computer Engineering",
@@ -391,7 +400,7 @@
   "meta": {
     "canonical": "https://antoniopereirabuilds.github.io/whoami/profile.json",
     "version": "1.0.0",
-    "lastModified": "2026-07-07T15:58:57.895Z",
+    "lastModified": "2026-07-07T16:11:35.455Z",
     "x_selectedClients": [
       {
         "industry": "Public sector",

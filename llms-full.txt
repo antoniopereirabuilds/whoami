@@ -5,7 +5,7 @@
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
 *Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-07-07T15:58:57.889Z*
+*Last generated: 2026-07-07T16:11:35.450Z*
 
 ## Summary
 
@@ -16,7 +16,7 @@ Senior OutSystems Solution Architect with a decade of experience designing, deli
 - Email: antonio.pereira.professional@outlook.com
 - LinkedIn: https://www.linkedin.com/in/antonioppereira/
 - OutSystems profile: https://www.outsystems.com/profile/olcy67xggw/
-- GitHub: https://github.com/antonioppereira
+- GitHub: https://github.com/antoniopereirabuilds
 - Location: Lisbon, Portugal
 
 ## At a glance
@@ -277,6 +277,11 @@ Verifiable at https://www.outsystems.com/profile/olcy67xggw/
 - OutSystems Associate Pre-Sales
 
 ## Education
+
+### Practical Introduction to Artificial Intelligence — Code for All_
+*2026*
+
+Verified certificate — certificate.codeforall.com/verify/5325ac2f29414
 
 ### Master's in Information Systems and Computer Engineering — Instituto Superior Técnico
 *2012 — 2014*
