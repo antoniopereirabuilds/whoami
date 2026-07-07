@@ -16,7 +16,6 @@
 - OutSystems profile: https://www.outsystems.com/profile/olcy67xggw/
 - GitHub: https://github.com/antonioppereira
 - Location: Lisbon, Portugal
-- Remote: Open to remote across EU & UK
 
 ## Key facts
 
@@ -27,7 +26,6 @@
 - 10 OutSystems credentials (6 certifications, 2 specializations, 2 commercial)
 - MSc in Information Systems and Computer Engineering, Instituto Superior Técnico (2014)
 - Languages: Portuguese (Native, C2), English (Professional working, C1), Spanish (Elementary, A2), French (Elementary · actively improving, A2)
-- Availability: Open to senior architect & engineering leadership roles
 
 ## Recent achievements
 

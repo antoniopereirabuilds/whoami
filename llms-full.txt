@@ -5,7 +5,7 @@
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
 *Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-06-24T23:51:52.663Z*
+*Last generated: 2026-07-07T15:58:57.889Z*
 
 ## Summary
 
@@ -18,8 +18,6 @@ Senior OutSystems Solution Architect with a decade of experience designing, deli
 - OutSystems profile: https://www.outsystems.com/profile/olcy67xggw/
 - GitHub: https://github.com/antonioppereira
 - Location: Lisbon, Portugal
-- Remote: Open to remote across EU & UK
-- Availability: Open to senior architect & engineering leadership roles
 
 ## At a glance
 
@@ -394,10 +392,6 @@ If given the opportunity I would really enjoy working with António again!
 ### What is António currently doing?
 
 António is OutSystems Architect at Babel Group in Lisbon, Portugal (since June 2024). He designs and audits OutSystems enterprise solutions, provides architectural guidance, and mentors delivery teams.
-
-### Is António open to new opportunities?
-
-Yes. António is open to senior OutSystems architect, principal engineer, and engineering leadership roles. He is open to remote work across the EU and UK, and to relocation for the right opportunity.
 
 ### How can a recruiter or hiring manager contact António?
 
