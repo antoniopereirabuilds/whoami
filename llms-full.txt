@@ -5,7 +5,7 @@
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
 *Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-07-29T00:26:36.156Z*
+*Last generated: 2026-07-29*
 
 ## Summary
 
@@ -408,11 +408,11 @@ OutSystems Champion is a select community recognition awarded by OutSystems to a
 
 ### What OutSystems credentials does António hold?
 
-Ten active OutSystems credentials: 6 certifications (Associate Developer ODC, Associate Developer O11, Expert Traditional Web Developer O11, Tech Lead O11, Professional Traditional Web Developer O11, Associate Traditional Web Developer O11), 2 specializations (Architecture Specialist ODC, Architecture Specialist O11), and 2 commercial credentials (Associate Sales, Associate Pre-Sales). All verifiable at https://www.outsystems.com/profile/olcy67xggw/.
+10 active OutSystems credentials: 6 certifications (Associate Developer ODC, Associate Developer O11, Expert Traditional Web Developer O11, Tech Lead O11, Professional Traditional Web Developer O11, Associate Traditional Web Developer O11), 2 specializations (Architecture Specialist ODC, Architecture Specialist O11), and 2 commercial credentials (OutSystems Associate Sales, OutSystems Associate Pre-Sales). All verifiable at https://www.outsystems.com/profile/olcy67xggw/.
 
 ### How many years of experience does António have?
 
-Over 10 years in software engineering. His career started in 2014 at OutSystems R&D as a Knowledge Engineer, then Software Engineer on the Service Studio team. He moved into delivery leadership in 2018 and into architecture in 2024.
+Over 10+ years in software engineering. His career started in 2014 at OutSystems R&D as a Knowledge Engineer, then Software Engineer on the Service Studio team. He moved into delivery leadership in 2018 and into architecture in 2024.
 
 ### What technologies does António specialize in?
 
