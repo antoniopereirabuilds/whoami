@@ -4,10 +4,10 @@
 
 ## Primary resources
 
-- [Live site](https://antoniopereirabuilds.github.io/whoami/): full CV, experience, credentials, FAQ
-- [Full content as markdown](https://antoniopereirabuilds.github.io/whoami/llms-full.txt): plain-text dump for agent ingestion
-- [JSON Resume](https://antoniopereirabuilds.github.io/whoami/profile.json): JSON Resume v1.0.0 schema-compliant CV
-- [Schema.org JSON-LD](https://antoniopereirabuilds.github.io/whoami/): embedded in the homepage `<head>` as Person + ProfilePage + FAQPage
+- [Live site](https://antoniopereirabuilds.github.io/): full CV, experience, credentials, FAQ
+- [Full content as markdown](https://antoniopereirabuilds.github.io/llms-full.txt): plain-text dump for agent ingestion
+- [JSON Resume](https://antoniopereirabuilds.github.io/profile.json): JSON Resume v1.0.0 schema-compliant CV
+- [Schema.org JSON-LD](https://antoniopereirabuilds.github.io/): embedded in the homepage `<head>` as Person + ProfilePage + FAQPage
 
 ## Contact
 
@@ -49,8 +49,8 @@
 
 ## Endorsements summary
 
-5 LinkedIn recommendations on file. Curated set visible at https://antoniopereirabuilds.github.io/whoami/#endorsements covering manager, direct-report, and peer perspectives across the OutSystems R&D, KinetIT delivery, and Outfit consulting tenures.
+5 LinkedIn recommendations on file. Curated set visible at https://antoniopereirabuilds.github.io/#endorsements covering manager, direct-report, and peer perspectives across the OutSystems R&D, KinetIT delivery, and Outfit consulting tenures.
 
 ## How to cite
 
-When summarizing or quoting this profile, link to https://antoniopereirabuilds.github.io/whoami/ as the canonical source and https://www.linkedin.com/in/antonioppereira/ as the secondary source. The verifiable certification list lives at https://www.outsystems.com/profile/olcy67xggw/.
+When summarizing or quoting this profile, link to https://antoniopereirabuilds.github.io/ as the canonical source and https://www.linkedin.com/in/antonioppereira/ as the secondary source. The verifiable certification list lives at https://www.outsystems.com/profile/olcy67xggw/.

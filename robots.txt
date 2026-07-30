@@ -1,9 +1,9 @@
-# robots.txt for https://antoniopereirabuilds.github.io/whoami/
+# robots.txt for https://antoniopereirabuilds.github.io/
 # Personal CV site — agents and search engines are welcome.
 #
-# NOTE: this file sits under a base path (https://antoniopereirabuilds.github.io/whoami/robots.txt). Crawlers only
-# read https://antoniopereirabuilds.github.io/robots.txt, so these rules are declarative until the site gets
-# a root-level robots.txt. Nothing here is load-bearing.
+# NOTE: this copy is served from the /whoami mirror, under a base path.
+# Crawlers only read robots.txt from the host root, so it has NO effect here.
+# The effective policy is https://antoniopereirabuilds.github.io/robots.txt.
 
 User-agent: *
 Allow: /
@@ -86,10 +86,10 @@ Allow: /
 
 # --- Discovery hints ---
 
-Sitemap: https://antoniopereirabuilds.github.io/whoami/sitemap-index.xml
+Sitemap: https://antoniopereirabuilds.github.io/sitemap-index.xml
 
 # Agent-facing resources, in the order they are most useful:
-# 1. https://antoniopereirabuilds.github.io/whoami/llms.txt        index (https://llmstxt.org/)
-# 2. https://antoniopereirabuilds.github.io/whoami/llms-full.txt   full CV as markdown
-# 3. https://antoniopereirabuilds.github.io/whoami/profile.json    JSON Resume v1.0.0
-# 4. https://antoniopereirabuilds.github.io/whoami/ai.txt          AI usage policy
+# 1. https://antoniopereirabuilds.github.io/llms.txt        index (https://llmstxt.org/)
+# 2. https://antoniopereirabuilds.github.io/llms-full.txt   full CV as markdown
+# 3. https://antoniopereirabuilds.github.io/profile.json    JSON Resume v1.0.0
+# 4. https://antoniopereirabuilds.github.io/ai.txt          AI usage policy

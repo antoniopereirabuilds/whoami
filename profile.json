@@ -3,9 +3,9 @@
   "basics": {
     "name": "António Pereira",
     "label": "OutSystems Architect & Champion",
-    "image": "https://antoniopereirabuilds.github.io/whoami/portrait.jpg",
+    "image": "https://antoniopereirabuilds.github.io/portrait.jpg",
     "email": "antonio.pereira.professional@outlook.com",
-    "url": "https://antoniopereirabuilds.github.io/whoami/",
+    "url": "https://antoniopereirabuilds.github.io/",
     "summary": "Senior OutSystems Solution Architect with a decade of experience designing, delivering, and scaling enterprise applications. OutSystems Champion since 2022 and Architecture Specialist (O11 + ODC) since 2022 — with 3+ years of formal architecture practice leadership across KinetIT and Babel (Top OutSystems Partner Worldwide). Career spans R&D engineering at OutSystems, delivery management for enterprise consultancies, and current Solution Architect role at Babel.",
     "location": {
       "city": "Lisbon",
@@ -398,9 +398,9 @@
     }
   ],
   "meta": {
-    "canonical": "https://antoniopereirabuilds.github.io/whoami/profile.json",
+    "canonical": "https://antoniopereirabuilds.github.io/profile.json",
     "version": "1.0.0",
-    "lastModified": "2026-07-29",
+    "lastModified": "2026-07-30",
     "x_selectedClients": [
       {
         "industry": "Public sector",

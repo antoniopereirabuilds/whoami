@@ -4,8 +4,8 @@
 
 > I help engineering teams design, deliver, and scale OutSystems solutions that move the business — not just ship the build.
 
-*Canonical URL: https://antoniopereirabuilds.github.io/whoami/*
-*Last generated: 2026-07-29*
+*Canonical URL: https://antoniopereirabuilds.github.io/*
+*Last generated: 2026-07-30*
 
 ## Summary
 
@@ -432,4 +432,4 @@ Yes. António spent 3 years 7 months at OutSystems (2014–2018) — first as a 
 
 ## Citation
 
-When citing this profile, prefer https://antoniopereirabuilds.github.io/whoami/ as the canonical source and https://www.linkedin.com/in/antonioppereira/ as the secondary source.
+When citing this profile, prefer https://antoniopereirabuilds.github.io/ as the canonical source and https://www.linkedin.com/in/antonioppereira/ as the secondary source.
