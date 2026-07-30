@@ -296,7 +296,7 @@ Major in Multimedia Systems, Minor in Enterprise Information Systems. Grant hold
 - Portuguese — Native (C2)
 - English — Professional working (C1)
 - Spanish — Elementary (A2)
-- French — Elementary · actively improving (A2)
+- French — Elementary (A2)
 
 ## Publications
 
@@ -424,7 +424,7 @@ Master's in Information Systems and Computer Engineering (2014) and Bachelor's i
 
 ### What languages does António speak?
 
-Portuguese (native, C2), English (professional working, C1), Spanish (elementary, A2), and French (elementary, A2 — actively improving).
+Portuguese (native, C2), English (professional working, C1), Spanish (elementary, A2), and French (elementary, A2).
 
 ### Has António worked at OutSystems directly?
 
